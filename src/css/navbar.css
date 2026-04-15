@@ -76,10 +76,6 @@
   text-align: center;
 }
 
-.header__checkbox:checked ~ .header__menu {
-  display: block;
-}
-
 .header__menu-checkbox:checked ~ .header__menu {
   display: flex;
 }
@@ -116,13 +112,26 @@
   .header {
     justify-content: space-between;
     padding: 20px;
+    position: relative;
   }
+
   .header__hamburguer {
     display: none;
   }
+
   .header__menu {
-    display: flex;
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    width: auto;
+    padding-top: 0;
+    background-color: transparent;
+
     gap: 40px;
+  }
+
+  .header__item {
+    text-align: left;
   }
 
   .header__link.active {
