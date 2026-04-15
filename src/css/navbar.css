@@ -2,22 +2,24 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 10px;
+  padding: 10px;
 
   background-color: var(--color-bg-header);
 }
 
-.header__logo-container {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
 .header__logo-text {
   color: var(--color-logo);
   font-size: 20px;
   font-weight: 800;
   font-style: italic;
   font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.header__logo-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
 }
 
 /* --- Burger Menu --- */
