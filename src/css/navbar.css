@@ -19,8 +19,67 @@
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+/* --- Burger Menu --- */
+.header__checkbox {
+  display: none;
+}
+
+.header__hamburguer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.header__hamburger-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-logo);
+  position: relative;
+  border-radius: 3px;
+}
+
+.header__hamburger-icon::before,
+.header__hamburger-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-logo);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.header__hamburger-icon::before {
+  top: -8px; /* Desplaza la raya hacia arriba */
+}
+
+.header__hamburger-icon::after {
+  top: 8px; /* Desplaza la raya hacia abajo */
+}
+
+.header__menu {
+  display: none;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+  background-color: var(--color-bg-header);
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
 .header__checkbox:checked ~ .header__menu {
   display: block;
+}
+
+.header__menu-checkbox:checked ~ .header__menu {
+  display: flex;
 }
 
 .header__link {
