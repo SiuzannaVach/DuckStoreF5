@@ -1,0 +1,227 @@
+/* Переменные проекта */
+:root {
+  --color-bg: #f1f5f9;
+  --color-bg-header: #edf1f7;
+  --color-bg-footer: #f4f7fc;
+  --color-logo: #ca8a04;
+  --color-title: #2b2f34;
+  --color-accent: #6f5900;
+  --color-accent2: #fed000;
+  --color-navbar-links: #64748b;
+  --color-text: #585c61;
+  --color-catalog-btn: #dee3ea;
+  --color-detail-btn: #edf1f7;
+  --color-price: #ab2d00;
+  --color-card1: #edf1f7;
+  --color-card2: rgb(64, 206, 243, 0.1);
+  --color-card3: #ffffff;
+  --color-card4: rgb(254, 208, 0, 0.1);
+  --color-in-stock: #22c55e;
+}
+
+/* Общие сбросы */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Шапка сайта */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 8%;
+}
+
+.header section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header .logo {
+  color: var(--color-logo);
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: var(--color-navbar-links);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  padding-bottom: 5px;
+}
+
+.header nav ul li a.active,
+.header nav ul li a:hover {
+  color: var(--color-title);
+  border-bottom: 3px solid var(--color-accent2);
+}
+
+/* Скрытое меню и лейбл для гамбургера */
+#menu {
+  display: none;
+}
+
+label[for="menu"] {
+  display: none; /* Скрыто на ПК */
+  font-size: 2rem;
+  color: var(--color-logo);
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Секция Hero (Главная) */
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  padding: 2rem 8% 5rem 8%;
+  gap: 4rem;
+}
+
+.hero-content {
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--color-title);
+  line-height: 1;
+  margin-bottom: 2rem;
+  letter-spacing: -2px;
+}
+
+.hero-content .highlight {
+  color: var(--color-accent);
+}
+
+.hero-content p {
+  max-width: 500px;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+
+/* Кнопка каталога */
+.btn-catalog {
+  display: inline-block;
+  background-color: var(--color-catalog-btn);
+  color: var(--color-title);
+  padding: 1.2rem 2.8rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+}
+
+.btn-catalog:hover {
+  background-color: #d1d9e2;
+  transform: translateY(-2px);
+}
+
+/* Изображение с синим фокусом */
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 2px;
+  outline: 6px solid #3b82f6; /* Увеличил толщину как на фото */
+  outline-offset: -3px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* Футер */
+footer {
+  background-color: var(--color-bg-footer);
+  padding: 4rem 8%;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* --- МОБИЛЬНАЯ ВЕРСИЯ (Адаптация под второй скриншот) --- */
+
+@media (max-width: 992px) {
+  .header {
+    padding: 1.5rem 5%;
+  }
+
+  /* Показываем гамбургер, скрываем меню */
+  label[for="menu"] {
+    display: block;
+  }
+
+  .header nav ul {
+    display: none;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column; /* Вертикальный стек */
+    padding: 1rem 5% 4rem 5%;
+    gap: 3rem;
+  }
+
+  .hero-image {
+    order: -1; /* Картинка теперь ПЕРВАЯ в списке */
+    width: 100%;
+  }
+
+  .hero-image img {
+    max-width: 100%; /* Картинка растягивается по ширине */
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem; /* Крупный текст на мобильных */
+    letter-spacing: -1px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .btn-catalog {
+    padding: 1rem 2.2rem;
+    font-size: 0.9rem;
+  }
+}
