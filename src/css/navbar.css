@@ -1,5 +1,9 @@
 .header {
   margin-inline: 8px;
+  display: flex;
+  align-items: center;
+
+  background-color: var(--color-bg-header);
 }
 
 .header__logo-container {
@@ -19,12 +23,22 @@
   display: block;
 }
 
+.header__link {
+  color: var(--color-navbar-links);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: bold;
+}
+
 @media (min-width: 768px) {
+  .header {
+    justify-content: space-between;
+    padding: 20px;
+  }
   .header__hamburguer {
     display: none;
   }
   .header__menu {
     display: flex;
-    gap: 20px;
+    gap: 40px;
   }
 }
