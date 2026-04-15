@@ -68,7 +68,7 @@
   gap: 20px;
   background-color: var(--color-bg-header);
   position: absolute;
-  top: 60px;
+  top: 30px;
   left: 0;
   width: 100%;
   text-align: center;
@@ -89,6 +89,25 @@
   padding-bottom: 4px;
   border-bottom: 3px solid transparent;
   transition: all 0.3s ease;
+}
+
+/* --- Turning 3 lines into an X --- */
+.header__menu-checkbox:checked + .header__hamburguer .header__hamburger-icon {
+  background-color: transparent;
+}
+
+.header__menu-checkbox:checked
+  + .header__hamburguer
+  .header__hamburger-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.header__menu-checkbox:checked
+  + .header__hamburguer
+  .header__hamburger-icon::after {
+  transform: rotate(-45deg);
+  top: 0;
 }
 
 @media (min-width: 768px) {
