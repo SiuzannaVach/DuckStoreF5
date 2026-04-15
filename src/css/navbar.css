@@ -1,0 +1,30 @@
+.header {
+  margin-inline: 8px;
+}
+
+.header__logo-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.header__logo-text {
+  color: var(--color-logo);
+  font-size: 20px;
+  font-weight: 800;
+  font-style: italic;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.header__checkbox:checked ~ .header__menu {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .header__hamburguer {
+    display: none;
+  }
+  .header__menu {
+    display: flex;
+    gap: 20px;
+  }
+}
