@@ -1,7 +1,7 @@
 .header {
-  margin-inline: 8px;
   display: flex;
   align-items: center;
+  padding-inline: 10px;
 
   background-color: var(--color-bg-header);
 }
@@ -27,6 +27,9 @@
   color: var(--color-navbar-links);
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: bold;
+  padding-bottom: 4px;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
 }
 
 @media (min-width: 768px) {
@@ -40,5 +43,10 @@
   .header__menu {
     display: flex;
     gap: 40px;
+  }
+
+  .header__link.active {
+    color: var(--color-accent);
+    border-bottom: 3px solid var(--color-accent2);
   }
 }
