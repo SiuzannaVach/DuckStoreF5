@@ -42,9 +42,9 @@
 }
 
 .catalog__grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
@@ -70,13 +70,52 @@
 }
 
 .card__price {
-    color: var(--color-price);
-    font-size: 1.5rem;
-    font-weight: bold;
+  color: var(--color-price);
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .card__description {
-  text-align:left;
+  text-align: left;
   margin-bottom: 20px;
   font-size: 1rem;
+}
+
+.card__button {
+  background-color: var(--color-detail-btn);
+  color: var(--color-accent);
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+
+  border: none;
+  border-radius: 100px;
+  padding: 14px 24px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  width: 100%;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.card__button:hover {
+  /* filter: brightness(0.9) oscurece cualquier color de fondo ligeramente */
+  filter: brightness(0.9);
+  transform: translateY(-2px); /* Un pequeño salto hacia arriba */
+}
+
+.card__button:active {
+  transform: translateY(0); /* Al hacer clic, vuelve a su sitio */
+}
+
+.card__buton-icon {
+  height: 1.2rem;
+  width: auto;
 }
