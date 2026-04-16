@@ -1,0 +1,143 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+
+  background-color: var(--color-bg-header);
+}
+
+.header__logo-text {
+  color: var(--color-logo);
+  font-size: 20px;
+  font-weight: 800;
+  font-style: italic;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.header__logo-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+}
+
+/* --- Burger Menu --- */
+.header__checkbox {
+  display: none;
+}
+
+.header__hamburguer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.header__hamburger-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-logo);
+  position: relative;
+  border-radius: 3px;
+}
+
+.header__hamburger-icon::before,
+.header__hamburger-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-logo);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.header__hamburger-icon::before {
+  top: -8px; /* Desplaza la raya hacia arriba */
+}
+
+.header__hamburger-icon::after {
+  top: 8px; /* Desplaza la raya hacia abajo */
+}
+
+.header__menu {
+  display: none;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  padding-top: 10px;
+  gap: 10px;
+  background-color: var(--color-bg-header);
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.header__menu-checkbox:checked ~ .header__menu {
+  display: flex;
+}
+
+.header__link {
+  color: var(--color-navbar-links);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: bold;
+  padding-bottom: 4px;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* --- Turning 3 lines into an X --- */
+.header__menu-checkbox:checked + .header__hamburguer .header__hamburger-icon {
+  background-color: transparent;
+}
+
+.header__menu-checkbox:checked
+  + .header__hamburguer
+  .header__hamburger-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.header__menu-checkbox:checked
+  + .header__hamburguer
+  .header__hamburger-icon::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+@media (min-width: 768px) {
+  .header {
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+  }
+
+  .header__hamburguer {
+    display: none;
+  }
+
+  .header__menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    width: auto;
+    padding-top: 0;
+    background-color: transparent;
+
+    gap: 40px;
+  }
+
+  .header__item {
+    text-align: left;
+  }
+
+  .header__link.active {
+    color: var(--color-accent);
+    border-bottom: 3px solid var(--color-accent2);
+  }
+}
