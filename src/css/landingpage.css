@@ -20,7 +20,7 @@ body {
   flex-direction: column;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 2rem 8% 5rem 8%;
+  padding: 4rem 8%;
   gap: 4rem;
 }
 
@@ -66,4 +66,20 @@ body {
   font-weight: bold;
   font-family: "Plus Jakarta Sans", sans-serif;
   padding: 1rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .hero__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 4rem 10%;
+    gap: 4rem;
+  }
+
+  .hero__image-wrapper {
+    order: 1;
+    width: 100%;
+    justify-content: flex-end;
+  }
 }
