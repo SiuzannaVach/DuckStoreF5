@@ -1,0 +1,148 @@
+.catalog-intro {
+  background-color: var(--color-card1);
+  border-radius: 40px;
+  margin: 30px;
+}
+
+.catalog-intro__title {
+  color: var(--color-title);
+  font-size: 2.5rem;
+  text-align: center;
+  padding-block: 20px;
+  padding-inline: 40px;
+}
+.catalog-intro__title-accent {
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+.catalog-intro__description {
+  text-align: center;
+  padding: 20px 40px 40px;
+}
+
+.catalog__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--color-card3);
+  border-radius: 40px;
+  margin: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+
+  height: 100%;
+}
+
+.card__image {
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-block: 15px;
+  width: 100%;
+  gap: 10px;
+}
+
+.card__title {
+  line-height: 1.2;
+}
+
+.card__price {
+  color: var(--color-price);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card__description {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 1rem;
+
+  flex-grow: 1;
+
+  line-height: 1.5;
+  color: #555;
+}
+
+.card__button {
+  background-color: var(--color-detail-btn);
+  color: var(--color-accent);
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+
+  border: none;
+  border-radius: 100px;
+  padding: 14px 24px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  width: 100%;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.card__button:hover {
+  /* filter: brightness(0.9) oscurece cualquier color de fondo ligeramente */
+  filter: brightness(0.9);
+  transform: translateY(-2px); /* Un pequeño salto hacia arriba */
+}
+
+.card__button:active {
+  transform: translateY(0); /* Al hacer clic, vuelve a su sitio */
+}
+
+.card__buton-icon {
+  height: 1.2rem;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .catalog-intro {
+    border-radius: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card__title {
+    font-size: 1.5rem;
+  }
+
+  .catalog-intro__description {
+    max-width: 700px;
+  }
+
+  .catalog__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding-inline: 20px;
+  }
+
+  .card {
+    margin: 0;
+    width: 100%;
+  }
+}
