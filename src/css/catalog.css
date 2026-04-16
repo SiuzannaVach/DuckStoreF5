@@ -40,3 +40,43 @@
   text-align: center;
   padding: 20px 40px 40px;
 }
+
+.catalog__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+  background-color: var(--color-card3);
+  border-radius: 40px;
+  margin: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.card__image {
+  border-radius: 40px;
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 15px;
+}
+
+.card__price {
+    color: var(--color-price);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card__description {
+  text-align:left;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
