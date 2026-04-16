@@ -1,0 +1,22 @@
+/* Block */
+.footer {
+    background-color: #f1f5f9; /* Note: Fallback goes after the variable */
+    background-color: var(--color-bg-footer, #f1f5f9);
+    padding: 20px;
+}
+
+/* Elements */
+.footer__container {
+    color: var(--color-big-footer, aliceblue);
+}
+
+.footer__logo {
+    display: flex;
+    align-items: flex-center;
+    gap: 10px;
+    color: var(--color-logo, #ca8a04);
+}
+
+.footer__copyright {
+    font-size: 14px;
+}
