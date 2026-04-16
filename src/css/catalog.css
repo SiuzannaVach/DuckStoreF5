@@ -1,0 +1,42 @@
+:root {
+  --color-bg: #f1f5f9;
+  --color-bg-header: #edf1f7;
+  --color-bg-footer: #f4f7fc;
+  --color-logo: #ca8a04;
+  --color-title: #2b2f34;
+  --color-accent: #6f5900;
+  --color-accent2: #fed000;
+  --color-navbar-links: #475569;
+  --color-text: #585c61;
+  --color-catalog-btn: #dee3ea;
+  --color-detail-btn: #edf1f7;
+  --color-price: #ab2d00;
+  --color-card1: #edf1f7;
+  --color-card2: rgb(64, 206, 243, 0.1);
+  --color-card3: #ffffff;
+  --color-card4: rgb(254, 208, 0, 0.1);
+  --color-in-stock: #22c55e;
+}
+
+.catalog-intro {
+  background-color: var(--color-card1);
+  border-radius: 40px;
+  margin: 30px;
+}
+
+.catalog-intro__title {
+  color: var(--color-title);
+  font-size: 2.5rem;
+  text-align: center;
+  padding-block: 20px;
+  padding-inline: 40px;
+}
+.catalog-intro__title-accent {
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+.catalog-intro__description {
+  text-align: center;
+  padding: 20px 40px 40px;
+}
