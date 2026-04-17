@@ -1,0 +1,146 @@
+.contact-hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-hero__title {
+  font-weight: 800;
+  padding: 30px;
+  line-height: 1.2;
+}
+
+.contact-hero__title-highlight {
+  color: var(--color-accent);
+}
+
+.contact-hero__description {
+  padding: 0 30px;
+  font-size: 1rem;
+}
+
+.contact-hero__image {
+  width: 100%;
+  max-width: 350px;
+  transform: rotate(3deg);
+  align-self: center;
+  margin: 30px auto;
+
+  border: 5px solid var(--color-card1);
+  border-radius: 50px;
+}
+
+.location-card {
+  background-color: var(--color-card3);
+  margin: 30px;
+  padding: 30px;
+  border-radius: 50px;
+  border: 2px solid var(--color-line-border1);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.location-card__title {
+  font-size: 1.5rem;
+  margin-block: 20px;
+}
+
+.location-card__text {
+  font-size: 1.2rem;
+}
+
+.location-card__map {
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+.connect-card {
+  background-color: var(--color-card4);
+  margin: 30px;
+  padding: 30px;
+  border-radius: 50px;
+  border: 2px solid var(--color-line-border2);
+}
+
+.connect-card__title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.connect-card__item {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding-block: 10px;
+}
+
+@media (min-width: 768px) {
+  .contact-hero {
+    max-width: 1200px;
+    flex-direction: row;
+
+    margin: 0 auto;
+  }
+
+  .contact-hero__description {
+    max-width: 750px;
+  }
+
+  .contact-hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact-info {
+    display: grid;
+    grid-template-columns: 2fr minmax(250px, 1fr);
+
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .location-card {
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .location-card__map {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .location-card__info {
+    padding-block: 20px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .connect-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .connect-card__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-block: 10px;
+    width: 100%;
+  }
+
+  .connect-card__icon {
+    flex-shrink: 0;
+    width: 24px;
+  }
+
+  .connect-card__text {
+    flex-grow: 1;
+    min-width: 0;
+  }
+}
