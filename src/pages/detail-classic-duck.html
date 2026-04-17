@@ -1,27 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DuckStore | Classic Duck</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DuckStore | Classic Yellow Duck</title>
     <link rel="stylesheet" href="../css/style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-      <section class="header__logo-container">
+      <section class="header__logo">
         <a href="../../index.html" class="header__logo-link">
           <img
             class="header__logo-img"
             src="../assets/icons/duck-icon.png"
-            alt="DuckStore"
+            alt="Logo"
           />
-          <div class="header__logo-text">DuckStore</div>
+          <span class="header__logo-text">DuckStore</span>
         </a>
       </section>
 
       <nav class="header__nav">
         <input type="checkbox" id="menu" class="header__menu-checkbox" hidden />
-
         <label for="menu" class="header__hamburguer">
           <span class="header__hamburger-icon"></span>
         </label>
@@ -39,5 +38,54 @@
         </ul>
       </nav>
     </header>
-</body>
+
+    <main class="product-detail">
+      <!-- Contenedor de imagen -->
+      <section class="product-detail__wrapper">
+        <img
+          src="../assets/images/duckYellow.png"
+          alt="Classic Yellow Duck"
+          class="product-detail__img"
+        />
+      </section>
+
+      <!-- Información de producto -->
+      <section class="product-detail__info">
+        <h1 class="product-detail__title">
+          Classic Yellow<br />
+          Duck
+        </h1>
+        <p class="product-detail__price">$9.99</p>
+
+        <div class="product-detail__description-group">
+          <div class="product-detail__accent-line"></div>
+          <p class="product-detail__text">
+            The icon of childhood joy. reimagined for the modern collector. Our
+            signature yellow duck features a perfectly weighted bottom for the
+            ultimate floating experience. Hand-finished for that premium tactile
+            "squish" that defines a DuckStore original.
+          </p>
+        </div>
+
+        <div class="product-detail__stock">
+          <span class="product-detail__stock-dot"></span> 42 in stock
+        </div>
+
+        <div class="product-detail__badges">
+          <!-- Bloques independientes Badge -->
+          <div class="badge">
+            <span class="badge__icon">🌊</span> Unsinkable
+          </div>
+          <div class="badge"><span class="badge__icon">🛡️</span> Non-Toxic</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <span class="footer__logo">DuckStore©</span>
+        <span class="footer__copy">2026 DuckStore. Playful by Design.</span>
+      </div>
+    </footer>
+  </body>
 </html>
