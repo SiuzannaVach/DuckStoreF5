@@ -1,25 +1,3 @@
-:root {
-  --color-bg: #f1f5f9;
-  --color-bg-header: #edf1f7;
-  --color-bg-footer: aliceblue;
-  --color-logo: #ca8a04;
-  --color-title: #2b2f34;
-  --color-accent: #6f5900;
-  --color-accent2: #fed000;
-  --color-navbar-links: #475569;
-  --color-text: #585c61;
-  --color-catalog-btn: #dee3ea;
-  --color-detail-btn: #edf1f7;
-  --color-price: #ab2d00;
-  --color-card1: #edf1f7;
-  --color-card2: rgb(64, 206, 243, 0.1);
-  --color-card3: #ffffff;
-  --color-card4: rgb(254, 208, 0, 0.1);
-  --color-line-border1: rgb(170, 173, 179, 0.1);
-  --color-line-border2: rgb(111, 89, 0, 0.1);
-  --color-in-stock: #22c55e;
-}
-
 .contact-hero {
   display: flex;
   flex-direction: column;
@@ -96,4 +74,73 @@
   gap: 10px;
 
   padding-block: 10px;
+}
+
+@media (min-width: 768px) {
+  .contact-hero {
+    max-width: 1200px;
+    flex-direction: row;
+
+    margin: 0 auto;
+  }
+
+  .contact-hero__description {
+    max-width: 750px;
+  }
+
+  .contact-hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact-info {
+    display: grid;
+    grid-template-columns: 2fr minmax(250px, 1fr);
+
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .location-card {
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .location-card__map {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .location-card__info {
+    padding-block: 20px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .connect-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .connect-card__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-block: 10px;
+    width: 100%;
+  }
+
+  .connect-card__icon {
+    flex-shrink: 0;
+    width: 24px;
+  }
+
+  .connect-card__text {
+    flex-grow: 1;
+    min-width: 0;
+  }
 }
