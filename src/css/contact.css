@@ -15,6 +15,8 @@
   --color-card2: rgb(64, 206, 243, 0.1);
   --color-card3: #ffffff;
   --color-card4: rgb(254, 208, 0, 0.1);
+  --color-line-border1: rgb(170, 173, 179, 0.1);
+  --color-line-border2: rgb(111, 89, 0, 0.1);
   --color-in-stock: #22c55e;
 }
 
@@ -45,6 +47,53 @@
   align-self: center;
   margin: 30px auto;
 
-  border:5px solid var(--color-card1);
+  border: 5px solid var(--color-card1);
   border-radius: 50px;
+}
+
+.location-card {
+  background-color: var(--color-card3);
+  margin: 30px;
+  padding: 30px;
+  border-radius: 50px;
+  border: 2px solid var(--color-line-border1);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.location-card__title {
+  font-size: 1.5rem;
+  margin-block: 20px;
+}
+
+.location-card__text {
+  font-size: 1.2rem;
+}
+
+.location-card__map {
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+.connect-card {
+  background-color: var(--color-card4);
+  margin: 30px;
+  padding: 30px;
+  border-radius: 50px;
+  border: 2px solid var(--color-line-border2);
+}
+
+.connect-card__title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.connect-card__item {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding-block: 10px;
 }
