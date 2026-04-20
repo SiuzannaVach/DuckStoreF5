@@ -13,6 +13,7 @@
   color: var(--color-text);
   text-align: center;
   width: 100%;
+  padding: 20px;
 }
 
 .footer-logo {
