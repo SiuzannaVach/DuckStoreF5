@@ -113,7 +113,7 @@
 @media (min-width: 768px) {
   .header {
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 50px;
     position: relative;
   }
 
@@ -136,8 +136,15 @@
     text-align: left;
   }
 
-  .header__link.active {
-    color: var(--color-accent);
+  .header nav ul li a {
+    text-decoration: none;
+    color: var(--color-navbar-links);
+    transition: all 0.3s ease;
+  }
+
+  .header nav ul li a.active,
+  .header nav ul li a:hover {
+    color: var(--color-title);
     border-bottom: 3px solid var(--color-accent2);
   }
 }

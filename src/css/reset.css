@@ -19,10 +19,21 @@ html {
   block-size: 100%;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
-  min-height: 100%;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* ocupa todo el espacio disponible */
 }
 
 img,
