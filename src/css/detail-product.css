@@ -125,4 +125,8 @@
     max-width: 400px;
     margin: 0 auto;
   }
+
+  .product-badges {
+    flex-direction: row;
+  }
 }
