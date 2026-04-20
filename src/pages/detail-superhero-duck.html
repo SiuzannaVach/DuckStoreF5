@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DuckStore | Superhero Duck</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <section class="header__logo">
+        <a href="../../index.html" class="header__logo-link">
+          <img
+            class="header__logo-img"
+            src="../assets/icons/duck-icon.png"
+            alt="Logo"
+          />
+          <span class="header__logo-text">DuckStore</span>
+        </a>
+      </section>
+
+      <nav class="header__nav">
+        <input type="checkbox" id="menu" class="header__menu-checkbox" hidden />
+        <label for="menu" class="header__hamburguer">
+          <span class="header__hamburger-icon"></span>
+        </label>
+
+        <ul class="header__menu">
+          <li class="header__item">
+            <a href="../../index.html" class="header__link">Home</a>
+          </li>
+          <li class="header__item">
+            <a href="./catalog.html" class="header__link">Catalog</a>
+          </li>
+          <li class="header__item">
+            <a href="./contact.html" class="header__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="product-detail">
+      <!-- Contenedor de imagen + info -->
+      <section class="product-detail__wrapper">
+        <div class="product-detail__media">
+          <img
+            src="../assets/images/superhero-duck-on-building.png"
+            alt="Superhero Duck on top of the building"
+            class="product-detail__img"
+          />
+        </div>
+
+        <article class="product-detail__info">
+          <h1 class="product-detail__title">Superhero Duck</h1>
+          <p class="product-detail__price">$12.99</p>
+
+          <div class="product-detail__description-group">
+            <div class="product-detail__accent-line"></div>
+            <p class="product-detail__text">
+              Not all heroes wear bubbles—some wear capes. Superhero Duck is
+              here to defend your bathroom from the forces of boredom. Featuring
+              a custom-stitched midnight blue fabric cape, a signature "D" chest
+              emblem, and a sleek heroic mask, this duck is engineered in a
+              dynamic "power pose" to inspire bravery in every splash.
+            </p>
+          </div>
+
+          <div class="product-detail__stock">
+            <span class="product-detail__stock-dot"></span> 89 in stock
+          </div>
+
+          <div class="product-badges">
+            <div class="product-badges__item">
+              <div class="product-badges__circle">
+                <img
+                  src="../assets/icons/action-pose.svg"
+                  alt=""
+                  class="product-badges__img"
+                />
+              </div>
+              <span class="product-badges__label">Action Pose</span>
+            </div>
+
+            <div class="product-badges__item">
+              <div class="product-badges__circle">
+                <img
+                  src="../assets/icons/ultra-durable.svg"
+                  alt=""
+                  class="product-badges__img"
+                />
+              </div>
+              <span class="product-badges__label">Ultra Durable</span>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img
+            src="../assets/icons/duck-icon.png"
+            alt="DuckStore logo icon"
+            class="footer__logo-img"
+          />
+          <p class="footer__logo-text">DuckStore</p>
+        </div>
+
+        <p class="footer__copyright">
+          &copy;2026 DuckStore. Playing by Design.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
