@@ -67,6 +67,66 @@ body {
   padding: 1rem 2rem;
 }
 
+/* --- Curated Collection Section --- */
+.curated-selection {
+  margin: 20px;
+}
+.curated-selection__eyebrow {
+  color: var(--color-accent);
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.curated-selection__title {
+  font-weight: 800;
+  line-height: 1;
+  font-size: 3rem;
+}
+
+.curated-selection__intro {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+  max-width: 600px;
+  padding-block: 20px;
+}
+.curated-selection__accent-line {
+  width: 4px;
+  background-color: var(--color-accent2);
+  flex-shrink: 0;
+}
+
+.curated-selection__description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
+
+.curated-selection__features .feature-card:nth-child(2) {
+  background-color: var(--color-card2);
+}
+
+.feature-card {
+  background-color: var(--color-card1);
+  border-radius: 48px;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-block: 50px;
+}
+
+.feature-card__icon {
+  width: 30px;
+}
+
+.feature-card__title {
+  padding-block: 20px;
+}
+
 @media (min-width: 768px) {
   .hero__container {
     display: grid;
