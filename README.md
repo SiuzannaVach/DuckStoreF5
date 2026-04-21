@@ -1,28 +1,29 @@
 # ![Imagen del logo](./src/assets/icons/duck-icon.png) DuckStore
+
 > Proyecto Frontend – Bootcamp Factoría F5
 
-DuckStore es una web responsive diseñada para practicar y consolidar conocimientos de **HTML5, CSS3, arquitectura modular, responsive design y accesibilidad web**.  
+DuckStore es una web responsive diseñada para practicar y consolidar conocimientos de **HTML5, CSS3, arquitectura modular, responsive design y accesibilidad web**.
 
 Incluye una landing page, un catálogo de productos y páginas de detalle, con un enfoque en diseño limpio, semántica correcta y experiencia de usuario accesible.
 
-![Completado](https://shields.io)
-![v1.0.0 ](https://shields.io)
-![Jira](https://shields.io)
-![Figma](https://shields.io)
+![Estado](https://img.shields.io/badge/Estado-Completado-brightgreen)
+![Versión](https://img.shields.io/badge/Versión-1.0.0-blue)
+![Jira](https://img.shields.io/badge/Jira-Board-orange)
+![Figma](https://img.shields.io/badge/Figma-DesignSystem-purple)
 
 ---
 
 ## 📑 Tabla de Contenidos
+
 1. [Descripción General](#-descripción-general)
 2. [Demostración Visual](#-demostración-visual)
-3. [Prerrequisitos e Instalación](#-prerrequisitos-e-instalación)
+3. [Instalación](#-instalación)
 4. [Uso](#-uso)
 5. [Tecnologías Utilizadas](#-tecnologías-utilizadas)
 6. [Accesibilidad Implementada](#-accesibilidad-implementada)
 7. [Mejoras Pendientes (Siguiente Sprint)](#-mejoras-pendientes-siguiente-sprint)
-8. [Screenshots](#-screenshots)
-9. [Autores y Reconocimientos](#-autores-y-reconocimientos)
-10. [Licencia](#-licencia)
+8. [Enlaces](#-enlaces)
+9. [Autoras](#-autoras)
 
 ---
 
@@ -31,10 +32,10 @@ Incluye una landing page, un catálogo de productos y páginas de detalle, con u
 DuckStore es un proyecto frontend desarrollado en el marco del Bootcamp de Factoría F5 & FemCoders.  
 Su objetivo es aplicar buenas prácticas de:
 
-- Semántica HTML5  
-- CSS modular y escalable  
-- Responsive Design (mobile-first)  
-- Accesibilidad WCAG 2.1 AA  
+- Semántica HTML5
+- CSS modular y escalable
+- Responsive Design (mobile-first)
+- Accesibilidad WCAG 2.1 AA
 - Trabajo colaborativo con metodología ágil (Scrum)
 
 El proyecto simula una tienda de patos de goma premium, con:
@@ -49,8 +50,137 @@ El proyecto simula una tienda de patos de goma premium, con:
 
 ## 🚀 Demostración Visual
 
-> 💡 *Pendiente de añadir capturas del prototipo en Figma o screenshots del proyecto final.*
+![Vista previa de la página contacto en versión escritorio](./src/assets/screenshots/contact-page-desktop.png)
 
-![Preview del Proyecto](https://placeholder.com)
+![Vista previa de la página contacto en versión escritorio](./src/assets/screenshots/contact-page-mobile.png)
+
+![Vista previa del menú en versión escritorio](./src/assets/screenshots/navbar-mobile.png)
 
 ---
+
+## ⚙️ Instalación
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/SiuzannaVach/DuckStoreF5.git
+   ```
+
+2. Accede al directorio del proyecto:
+
+   ```bash
+   cd DuckStoreF5
+   ```
+
+3. Abre Visual Studio Code
+
+   ```bash
+   code .
+   ```
+
+## 🧩 Uso
+
+Una vez abierto el proyecto:
+
+- Navega por la **landing page** para ver la presentación del producto.
+- Accede al **catálogo** para explorar los diferentes modelos de patos.
+- Entra en cualquier **página de detalle** para ver información ampliada de cada patito disponible.
+- Usa el **menú responsive** para moverte entre secciones.
+
+---
+
+## 🛠 Tecnologías Utilizadas
+
+### 🎨 Diseño & Gestión
+
+- **Figma** — Diseño UI/UX y Design System
+- **Stitch** — Sistema de componentes
+- **Jira** — Gestión ágil del proyecto
+- **VS Code** — Entorno de desarrollo
+- **Git & GitHub** — Versión de controles
+
+### 💻 Desarrollo
+
+- **HTML5 semántico**
+- **CSS3 modular**
+
+---
+
+# 🟦 Accesibilidad Implementada
+
+El proyecto DuckStore incorpora múltiples prácticas alineadas con **WCAG 2.1 AA**, garantizando una experiencia inclusiva y usable para todo tipo de usuarios.
+
+### ✔️ Semántica HTML5 estructurada
+
+- Uso correcto de `<header>`, `<nav>`, `<main>`, `<section>`, `<article>` y `<footer>`.
+- Jerarquía de encabezados coherente, con un `<h1>` por página.
+
+### ✔️ Navegación accesible
+
+- `aria-current="page"` en el enlace activo del menú.
+- Menú responsive accesible mediante teclado (tabulación correcta y foco visible).
+
+### ✔️ Textos alternativos adecuados
+
+- Todas las imágenes relevantes incluyen `alt` descriptivo.
+- Iconos decorativos marcados con `aria-hidden="true"`.
+
+### ✔️ Contraste de colores revisado
+
+- Paleta evaluada según WCAG 2.1 AA.
+
+### ✔️ Visibilidad del foco
+
+- Estilos de `:focus` y `:focus-visible` implementados.
+
+### ✔️ Responsive accesible
+
+- Diseño fluido sin pérdida de contenido al hacer zoom.
+- Imágenes y tarjetas adaptadas a distintos tamaños de pantalla.
+
+### ✔️ Idioma y metadatos
+
+- Todas las páginas declaran correctamente `lang="en"`.
+- Metadatos de viewport configurados para accesibilidad móvil.
+
+---
+
+## 🟧 Mejoras Pendientes (Siguiente Sprint)
+
+### 🔸 Accesibilidad
+
+- Añadir `prefers-reduced-motion` para usuarios con sensibilidad al movimiento.
+- Revisar contraste en estados interactivos tras añadir JavaScript.
+- Mejorar la gestión del foco en elementos dinámicos (menú, overlays, etc.).
+
+### 🔸 JavaScript
+
+Entre otras funciones, implementar un menú hamburguesa completamente accesible:
+
+- Añadir `aria-expanded`.
+- Añadir `aria-label` dinámico (“Open menu” / “Close menu”).
+- Gestionar el foco al abrir y cerrar el menú.
+
+### 🔸 Funcionalidades adicionales
+
+Hablar con el cliente sobre:
+
+- Posible **formulario de contacto**.
+- Validación accesible (`aria-describedby`, roles de error).
+- Nuevas secciones o funcionalidades según necesidades del proyecto.
+
+---
+
+## 🔗 Enlaces
+
+- **GitHub Pages:** _(añadir enlace cuando esté publicado)_
+- **Jira del proyecto:** _(añadir enlace)_
+- **Figma (Design System + prototipo):** _(añadir enlace)_
+
+---
+
+## Autoras
+
+- [**Aïda García**](https://github.com/aidag91) — Equipo de desarrollo y Scrum Master
+- [**Rukayatu Seidu**]() — Equipo de desarrollo
+- [**Siuzanna Vachaganian**]() — Equipo de desarrollo y Product Owner
