@@ -222,5 +222,5 @@ Hablar con el cliente sobre:
 ## 👩‍💻 Autoras
 
 - [**Aïda García**](https://github.com/aidag91) — Equipo de desarrollo y Scrum Master
-- [**Rukayatu Seidu**]() — Equipo de desarrollo
-- [**Siuzanna Vachaganian**]() — Equipo de desarrollo y Product Owner
+- [**Rukayatu Seidu**](https://github.com/rseidu941-commits) — Equipo de desarrollo
+- [**Siuzanna Vachaganian**](https://github.com/SiuzannaVach/) — Equipo de desarrollo y Product Owner
