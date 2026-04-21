@@ -127,6 +127,63 @@ body {
   padding-block: 20px;
 }
 
+/* --- Hand-Crafted Section --- */
+.hand-crafted {
+  background-color: var(--color-card3);
+  border-radius: 48px;
+  margin: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.hand-crafted > *:not(.hand-crafted__image) {
+  padding: 30px;
+}
+
+.hand-crafted__content {
+  padding: 30px;
+}
+.hand-crafted__title {
+  font-weight: 800;
+  line-height: 1;
+
+  padding: 10px;
+}
+
+.hand-crafted__title--accent {
+  color: var(--color-accent);
+}
+
+.hand-crafted__description {
+  padding: 10px;
+}
+
+.hand-crafted__benefits {
+  padding: 20px;
+}
+.benefit-item {
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+
+  gap: 10px;
+
+  padding-top: 20px;
+}
+
+.benefit-item__text {
+  font-weight: bold;
+  color: var(--color-title);
+}
+
+.hand-crafted__image {
+  width: 100%;
+  display: block;
+  margin: 0;
+  border-radius: 0 0 48px 48px;
+}
+
 @media (min-width: 768px) {
   .hero__container {
     display: grid;
@@ -155,7 +212,7 @@ body {
   }
 
   .curated-selection__intro {
-    margin-inline: 0; 
+    margin-inline: 0;
     justify-content: flex-start;
   }
 
