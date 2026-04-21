@@ -106,7 +106,47 @@ Una vez abierto el proyecto:
 
 ---
 
-# 🟦 Accesibilidad Implementada
+## 📁 Estructura de Carpetas
+
+```
+DuckStoreF5/
+│
+├── index.html
+│
+├── src/
+│   ├── assets/
+│   │   ├── icons/
+│   │   │   └── (iconos del proyecto)
+│   │   ├── images/
+│   │   │   └── (imágenes del catálogo y páginas de detalle)
+│   │   └── screenshots/
+│   │       └── (capturas usadas en el README)
+│   │
+│   ├── css/
+│   │   ├── catalog.css
+│   │   ├── contact.css
+│   │   ├── detail-product.css
+│   │   ├── footer.css
+│   │   ├── landingpage.css
+│   │   ├── navbar.css
+│   │   ├── reset.css
+│   │   └── style.css   ← archivo principal que importa todos los módulos
+│   │
+│   └── pages/
+│       ├── catalog.html
+│       ├── contact.html
+│       ├── detail-classic-duck.html
+│       ├── detail-captain-quack.html
+│       ├── detail-astro-duck.html
+│       ├── detail-chef-quack.html
+│       ├── detail-superhero-duck.html
+│       └── detail-zen-master.html
+│
+└── README.md
+
+```
+
+## 🟦 Accesibilidad Implementada
 
 El proyecto DuckStore incorpora múltiples prácticas alineadas con **WCAG 2.1 AA**, garantizando una experiencia inclusiva y usable para todo tipo de usuarios.
 
