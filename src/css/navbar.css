@@ -91,6 +91,16 @@
   transition: all 0.3s ease;
 }
 
+.header__link:focus {
+  outline: 2px solid var(--color-accent2);
+  outline-offset: 4px;
+}
+
+.header__link:focus-visible {
+  color: var(--color-title);
+  border-bottom: 3px solid var(--color-accent2);
+}
+
 /* --- Turning 3 lines into an X --- */
 .header__menu-checkbox:checked + .header__hamburguer .header__hamburger-icon {
   background-color: transparent;
