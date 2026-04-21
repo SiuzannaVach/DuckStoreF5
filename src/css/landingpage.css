@@ -225,4 +225,33 @@ body {
     flex: 1;
     max-width: 450px;
   }
+
+  /* --- Hand-Crafted Section --- */
+  .hand-crafted {
+    background-color: var(--color-card1);
+    width: 100%;
+    padding: 60px 0;
+    margin: 0;
+  }
+
+  .hand-crafted__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 0 30px;
+  }
+
+  .hand-crafted__content {
+    flex: 1;
+  }
+
+  .hand-crafted__image {
+    flex: 1;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 48px;
+    object-fit: cover;
+  }
 }
