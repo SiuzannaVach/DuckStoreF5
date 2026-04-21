@@ -1,8 +1,8 @@
 # 🦆 DuckStore
 > Una solución integral diseñada en **Figma**, gestionada en **Jira** y desarrollada en **VS Code**.
 
-![Estado](https://shields.io)
-![Versión](https://shields.io)
+![Completado](https://shields.io)
+![v1.0.0 ](https://shields.io)
 ![Jira](https://shields.io)
 ![Figma](https://shields.io)
 
