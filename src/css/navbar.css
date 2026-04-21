@@ -144,7 +144,7 @@
 
   .header nav ul li a.active,
   .header nav ul li a:hover {
-    color: var(--color-title);
+    color: var(--color-accent);
     border-bottom: 3px solid var(--color-accent2);
   }
 }
