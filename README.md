@@ -214,12 +214,12 @@ Hablar con el cliente sobre:
 ## 🔗 Enlaces
 
 - **GitHub Pages:** _(añadir enlace cuando esté publicado)_
-- **Jira del proyecto:** _(añadir enlace)_
-- **Figma (Design System + prototipo):** _(añadir enlace)_
+- [**Jira del proyecto**](https://aidagarciaf5.atlassian.net/jira/software/projects/DST/boards/1?selectedIssue=DST-79&atlOrigin=eyJpIjoiYjU2ZjM1NWZlOGNlNDkxOWExM2RhOTBkOWJlMmM3ZjYiLCJwIjoiaiJ9)
+- [**Figma (Design System + prototipo)**](https://www.figma.com/design/qfpxntI80xDhP2UWs282hR/Sketch--Mockup---Prototype?node-id=0-1&t=ZkgZfaiigTb6EZrP-1)
 
 ---
 
-## Autoras
+## 👩‍💻 Autoras
 
 - [**Aïda García**](https://github.com/aidag91) — Equipo de desarrollo y Scrum Master
 - [**Rukayatu Seidu**]() — Equipo de desarrollo
