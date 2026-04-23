@@ -213,7 +213,7 @@ Hablar con el cliente sobre:
 
 ## 🔗 Enlaces
 
-- **GitHub Pages:** _(añadir enlace cuando esté publicado)_
+- [**GitHub Pages**](https://siuzannavach.github.io/DuckStoreF5/)
 - [**Jira del proyecto**](https://aidagarciaf5.atlassian.net/jira/software/projects/DST/boards/1?selectedIssue=DST-79&atlOrigin=eyJpIjoiYjU2ZjM1NWZlOGNlNDkxOWExM2RhOTBkOWJlMmM3ZjYiLCJwIjoiaiJ9)
 - [**Figma (Design System + prototipo)**](https://www.figma.com/design/qfpxntI80xDhP2UWs282hR/Sketch--Mockup---Prototype?node-id=0-1&t=ZkgZfaiigTb6EZrP-1)
 

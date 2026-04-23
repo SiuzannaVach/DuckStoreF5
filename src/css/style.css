@@ -28,6 +28,14 @@
   --color-line-border1: rgb(170, 173, 179, 0.1);
   --color-line-border2: rgb(111, 89, 0, 0.1);
   --color-in-stock: #22c55e;
+  --color-form-placeholder: #aaadb3;
+  --color-form-input: #d8dde5;
+  --color-btn-contact-text: #fff2d2;
+  --color-btn-contact-bg: linear-gradient(
+    50deg,
+    rgba(111, 89, 0, 1) 0%,
+    rgba(254, 208, 0, 1) 100%
+  );
 }
 
 body {
@@ -39,12 +47,16 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+button {
   font-family: "Plus Jakarta Sans", sans-serif;
   color: var(--color-title);
 }
 
-p {
+p,
+input,
+textarea,
+label {
   font-family: "Be Vietnam Pro", sans-serif;
   color: var(--color-text);
 }
@@ -72,4 +84,43 @@ h6 {
 p {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+input,
+textarea {
+  font-size: 1rem;
+  color: var(--color-form-placeholder);
+
+  background-color: var(--color-form-input);
+  border-radius: 32px;
+  border: none;
+
+  padding: 10px 15px;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+label {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  padding: 10px 0;
+}
+
+button {
+  border: none;
+  border-radius: 40px;
+  padding: 20px 30px;
+  font-weight: 800;
+}
+
+button:active {
+  transform: translateY(0);
+}
+button:hover {
+  filter: brightness(0.9);
+  transform: translateY(-2px);
 }
