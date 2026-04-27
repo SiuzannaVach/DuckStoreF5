@@ -76,6 +76,15 @@ export function removeFromCart(productId) {
   cart.push(...updatedCart);
 }
 
-calcularSubtotal(product);
+export function calcularSubtotal(productId) {
+  // 1. Recibir un producto del carrito
+  const productInCart = cart.find((item) => item.id === productId);
+
+  // 2. Calcular precio * cantidad
+  const subtotal = productInCart.price * productInCart.quantity;
+
+  // 3. Devolver el subtotal
+  return subtotal;
+}
 
 calcularTotal(cart);
