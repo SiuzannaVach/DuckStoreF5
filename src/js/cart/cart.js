@@ -28,9 +28,38 @@ export function addToCart(productId) {
   });
 }
 
-incrementQuantity(productId);
+export function incrementQuantity(productId) {
+  // 1. Buscamos si el producto ya está en el carrito
+  const productInCart = cart.find((item) => item.id === productId);
 
-decrementQuantity(productId);
+  // 2. Si existe, incrementamos la cantidad en 1
+  if (productInCart) {
+    productInCart.quantity++;
+  }
+}
+
+export function decrementQuantity(productId) {
+  // 1. Buscamos si el producto ya está en el carrito
+  const productInCart = cart.find((item) => item.id === productId);
+
+  // 2. Si no existe, no hacemos nada
+  if (!productInCart) return;
+
+  // 3. Si existe, reducimos la cantidad
+  productInCart.quantity--;
+
+  // 4. Si llega a 0, lo eliminamos del carrito
+  if (productInCart.quantity === 0) {
+    const index = cart.findIndex((item) => item.id === productId);
+    cart.splice(index, 1);
+    return;
+  }
+
+  // 5. Nunca permitir negativos
+  if (productInCart.quantity < 0) {
+    throw new Error("Product quantity cannot be negative.");
+  }
+}
 
 removeFromCart(productId);
 
