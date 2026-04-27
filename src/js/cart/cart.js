@@ -76,7 +76,7 @@ export function removeFromCart(productId) {
   cart.push(...updatedCart);
 }
 
-export function calcularSubtotal(productId) {
+export function calculateSubtotal(productId) {
   // 1. Recibir un producto del carrito
   const productInCart = cart.find((item) => item.id === productId);
 
@@ -87,4 +87,12 @@ export function calcularSubtotal(productId) {
   return subtotal;
 }
 
-calcularTotal(cart);
+export function calculateTotal(cart) {
+  // 1. Recorremos todo el carrito con reduce.
+  // 'acc' es el acumulador que empieza en 0 (ver en la última línea).
+  // 'item' es cada producto del carrito en cada iteración.
+  return cart.reduce((acc, item) => {
+    // 2. Sumamos al acumulador el subtotal de este producto, reutilizando la función calculateSubtotal para mantener el código modular (haciendo un callback).
+    return acc + calculateSubtotal(item.id);
+  }, 0);
+}
