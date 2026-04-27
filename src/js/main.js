@@ -33,3 +33,28 @@ const renderProducts = (list) => {
 
 // 4. Ejecutamos la función al cargar la página
 renderProducts(products);
+
+// ... (tu código anterior de renderProducts y la selección del contenedor)
+
+// 1. Seleccionamos todos los botones de filtro
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+// 2. Creamos la función de filtrado
+const filterByCategory = (category) => {
+  // Si es 'all', mostramos todos. Si no, filtramos por la propiedad 'category'
+  const filteredList =
+    category === "all"
+      ? products
+      : products.filter((product) => product.category === category);
+
+  // Re-renderizamos con la lista filtrada
+  renderProducts(filteredList);
+};
+
+// 3. Escuchamos los clicks en los botones
+filterButtons.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const category = e.target.getAttribute("data-category");
+    filterByCategory(category);
+  });
+});
