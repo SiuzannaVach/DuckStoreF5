@@ -61,7 +61,20 @@ export function decrementQuantity(productId) {
   }
 }
 
-removeFromCart(productId);
+export function removeFromCart(productId) {
+  // 1. Buscamos si el producto ya está en el carrito
+  const productInCart = cart.find((item) => item.id === productId);
+
+  // 2. Si no existe, no hacemos nada
+  if (!productInCart) return;
+
+  // 3. Si existe, creamos un nuevo array sin ese producto
+  const updatedCart = cart.filter((item) => item.id !== productId);
+
+  // 4. Vaciar el carrito original y rellenarlo con el nuevo
+  cart.length = 0;
+  cart.push(...updatedCart);
+}
 
 calcularSubtotal(product);
 
