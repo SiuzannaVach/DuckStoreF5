@@ -41,12 +41,12 @@
 }
 
 .location-card__title {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-block: 20px;
 }
 
 .location-card__text {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .location-card__map {
@@ -63,7 +63,7 @@
 }
 
 .connect-card__title {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 
@@ -144,3 +144,4 @@
     min-width: 0;
   }
 }
+
