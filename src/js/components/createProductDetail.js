@@ -28,9 +28,9 @@ export const createProductDetail = (product) => {
         </div>
 
         <div class="quantity-selector">
-            <button id="qty-minus" class="qty-btn">-</button>
+            <button id="qty-minus" class="qty-btn" aria-label="Decrease quantity">-</button>
             <span id="qty-value">1</span>
-            <button id="qty-plus" class="qty-btn">+</button>
+            <button id="qty-plus" class="qty-btn" aria-label="Increase quantity">+</button>
         </div>
 
         <button id="add-to-cart-btn" class="product-detail__btn">

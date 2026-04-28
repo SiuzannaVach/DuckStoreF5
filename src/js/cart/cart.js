@@ -9,10 +9,10 @@ import {
 
 function renderCartItem(item) {
   return `
-    <article class="cart-item">
+    <div class="cart-item" role="listitem">
         <div class="cart-item__image-wrapper">
             <img class="cart-item__image" src="${item.image}" alt="${item.name}">
-            <button class="cart-item__remove-btn" data-id="${item.id}">
+            <button class="cart-item__remove-btn" data-id="${item.id}" aria-label="Remove item from cart">
             <img src="../assets/icons/bin.svg" alt="">
             </button>
         </div>
@@ -24,17 +24,17 @@ function renderCartItem(item) {
 
         <div class="cart-item__bottom-row">
             <div class="cart-item__quantity">
-            <button class="cart-item__btn cart-item__btn--decrease" data-id="${item.id}">−</button>
+            <button class="cart-item__btn cart-item__btn--decrease" data-id="${item.id}" aria-label="Decrease quantity">−</button>
             <span class="cart-item__quantity-value">${item.quantity}</span>
-            <button class="cart-item__btn cart-item__btn--increase" data-id="${item.id}">+</button>
+            <button class="cart-item__btn cart-item__btn--increase" data-id="${item.id}" aria-label="Increase quantity">+</button>
             </div>
 
             <div class="cart-item__subtotal">
-                <p class="cart-item__subtotal-value">$${calculateSubtotal(item.id)}</p>
+                <p class="cart-item__subtotal-value" aria-label="Subtotal for this item">$${calculateSubtotal(item.id)}</p>
                 <p class="cart-item__subtotal-label">Subtotal</p>
             </div>
         </div>
-    </article>
+    </div>
 
   `;
 }
@@ -75,6 +75,8 @@ function setupCartEvents() {
   const cartContainer = document.getElementById("cart-items");
   if (!cartContainer) return;
 
+  const announcer = document.getElementById("cart-announcer");
+
   cartContainer.addEventListener("click", (event) => {
     const target = event.target;
 
@@ -89,6 +91,7 @@ function setupCartEvents() {
     if (button.classList.contains("cart-item__btn--increase")) {
       incrementQuantity(productId);
       renderCart();
+      announcer.textContent = "Quantity increased";
       return;
     }
 
@@ -96,6 +99,7 @@ function setupCartEvents() {
     if (button.classList.contains("cart-item__btn--decrease")) {
       decrementQuantity(productId);
       renderCart();
+      announcer.textContent = "Quantity decreased";
       return;
     }
 
@@ -103,6 +107,7 @@ function setupCartEvents() {
     if (button.classList.contains("cart-item__remove-btn")) {
       removeFromCart(productId);
       renderCart();
+      announcer.textContent = "Item removed from cart";
       return;
     }
   });

@@ -47,6 +47,7 @@
     </header>
 
     <main class="cart">
+      <div aria-live="polite" id="cart-announcer" class="visually-hidden"></div>
       <header class="cart__header">
         <h1 class="cart__title">Shopping Cart</h1>
         <p class="cart__subtitle">
@@ -55,7 +56,12 @@
       </header>
 
       <!-- Contenedor donde JS pintará los productos -->
-      <section class="cart__items" id="cart-items"></section>
+      <section
+        class="cart__items"
+        id="cart-items"
+        role="list"
+        aria-label="Shopping cart items"
+      ></section>
 
       <!-- Resumen del pedido -->
       <section class="cart-summary">
@@ -81,7 +87,13 @@
               <p class="cart-summary__taxes">Including Taxes</p>
             </div>
 
-            <p id="cart-total" class="cart-summary__total-value">$0.00</p>
+            <p
+              id="cart-total"
+              class="cart-summary__total-value"
+              aria-label="Total price"
+            >
+              $0.00
+            </p>
           </div>
 
           <div class="cart-summary__badges">
