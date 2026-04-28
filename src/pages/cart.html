@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DuckStore | Shopping Cart</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/png" href="../assets/icons/duck-icon.png" />
+  </head>
+  <body>
+    <header class="header">
+      <section class="header__logo-container">
+        <a href="../../index.html" class="header__logo-link">
+          <img
+            class="header__logo-img"
+            src="../assets/icons/duck-icon.png"
+            alt="DuckStore"
+          />
+          <div class="header__logo-text">DuckStore</div>
+        </a>
+      </section>
+
+      <nav class="header__nav">
+        <input type="checkbox" id="menu" class="header__menu-checkbox" hidden />
+
+        <label for="menu" class="header__hamburguer">
+          <span class="header__hamburger-icon"></span>
+        </label>
+
+        <ul class="header__menu">
+          <li class="header__item">
+            <a href="../../index.html" class="header__link">Home</a>
+          </li>
+          <li class="header__item">
+            <a
+              href="./catalog.html"
+              class="header__link active"
+              aria-current="page"
+              >Catalog</a
+            >
+          </li>
+          <li class="header__item">
+            <a href="./contact.html" class="header__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div>
+        <h1>Shopping Cart</h1>
+        <p>Review your selection of premium collectibles</p>
+      </div>
+
+      <section>
+        <article class="card">
+          <div class="card__picture">
+            <img
+              src="../assets/images/classic-yellow.png"
+              alt="Image of a classic yellow duck"
+            />
+            <img src="../assets/icons/bin.svg" alt="Icon of a recycle bin" />
+          </div>
+
+          <div class="card__info">
+            <div class="card__title&price">
+              <h2>Classic Yellow Duck</h2>
+              <p>$9.99 each</p>
+            </div>
+            <div>
+              <div><span>-</span>2<span>+</span></div>
+            </div>
+            <div>
+                <p>$19,98</p>
+                <p>Subtotal</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="oder-summary">
+        <h2>Order Summary</h2>
+        <article>
+            <div>
+                <p>Subtotal</p>
+                <p>$34.97</p>
+            </div>
+            <div>
+                <p>Shipping</p>
+                <p>FREE</p>
+            </div>
+            <div>
+                <div>
+                    <p>Total Amount</p>
+                    <p>Including Taxes</p>
+                </div>
+                <p>$34.97</p>
+            </div>
+            <div>
+        </article>
+
+        <article>
+            <div>
+                <img src="../assets/icons/secure-icon.svg" alt="Icon of a shield">
+                <p>Secure</p>
+            </div>
+            <div>
+                <img src="../assets/icons/fast-ship-icon.svg" alt="Icon of a truck">
+                <p>Fast ship</p>
+            </div>
+            <div>
+                <img src="../assets/icons/organic-icon.svg" alt="Icon od a leave">
+                <p>Organic</p>
+            </div>
+        </article>
+
+        <article>
+            <button>Proceed to checkout <img src="" alt="Arrow icon"> </button>
+        </article>
+
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img
+            src="../assets/icons/duck-icon.png"
+            alt="DuckStore logo icon"
+            class="footer__logo-img"
+          />
+          <p class="footer__logo-text">DuckStore</p>
+        </div>
+
+        <p class="footer__copyright">
+          &copy;2026 DuckStore. Playing by Design.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
