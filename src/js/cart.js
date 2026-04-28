@@ -24,7 +24,6 @@ const miCarrito = [
 // 3. Función para abrir el modal
 export const abrirRecibo = () => {
   if (!receiptDetails) return;
-
   receiptDetails.innerHTML = "";
   let subtotal = 0;
 
@@ -49,22 +48,36 @@ export const abrirRecibo = () => {
   if (btnTotalVal) btnTotalVal.innerText = `$${total.toFixed(2)}`;
 
   modal.style.display = "flex";
-
-  // BLOQUEO del fondo (Efecto profesional)
   document.body.style.overflow = "hidden";
 };
 
-// 4. BOTÓN: Confirmar Pago
+// 4. BOTÓN: Confirmar Pago (BLOQUE ACTUALIZADO)
 if (btnPay) {
   btnPay.addEventListener("click", () => {
-    modal.innerHTML = `
-      <div class="modal-content" style="text-align:center; padding:40px;">
-        <div style="font-size: 60px; margin-bottom: 20px;">✅</div>
-        <h2 style="color: #d4a017; margin-bottom: 10px;">¡Pago Exitoso!</h2>
-        <p style="color: #666; margin-bottom: 20px;">Tu pedido de patitos está en camino.</p>
-        <button onclick="location.reload()" class="pay-now-btn">Volver a la tienda</button>
-      </div>
-    `;
+    // Simulamos carga
+    btnPay.innerText = "Procesando...";
+    btnPay.style.opacity = "0.7";
+    btnPay.style.pointerEvents = "none";
+
+    setTimeout(() => {
+      // Mensaje de éxito detallado en el DOM
+      modal.innerHTML = `
+        <div class="modal-content" style="text-align:center; padding:40px;">
+          <div style="font-size: 60px; margin-bottom: 20px;">🦆✨</div>
+          <h2 style="color: #d4a017; margin-bottom: 10px;">¡Pago Exitoso!</h2>
+          <p style="color: #666; margin-bottom: 20px;">Tus patitos están preparando las maletas para su nueva bañera.</p>
+          <button id="btn-success-close" class="pay-now-btn">Volver a la tienda</button>
+        </div>
+      `;
+
+      // Evento para limpiar y cerrar todo
+      document
+        .querySelector("#btn-success-close")
+        .addEventListener("click", () => {
+          document.body.style.overflow = "auto";
+          location.reload(); // Limpia el carrito al recargar
+        });
+    }, 1500);
   });
 }
 
@@ -72,7 +85,6 @@ if (btnPay) {
 if (btnClose) {
   btnClose.addEventListener("click", () => {
     modal.style.display = "none";
-    // DESBLOQUEO del fondo
     document.body.style.overflow = "auto";
   });
 }
