@@ -73,9 +73,8 @@
   gap: 2rem;
   background: var(--color-btn-quantity);
   padding: 1rem 1.5rem;
-  border-radius: 999px; 
+  border-radius: 999px;
 }
-
 
 .cart-item__btn {
   background: transparent;
@@ -108,9 +107,103 @@
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+/* --- Order Summary --- */
 .cart-summary {
   margin-top: 3rem;
   padding: 1.5rem;
-  background: #fafafa;
-  border-radius: 12px;
+  background: var(--color-card-order-summary);
+  border-radius: 32px;
+}
+
+.cart-summary__title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  border-bottom: 2px solid var(--color-underline);
+  padding-bottom: 4px;
+  line-height: 1.2;
+}
+
+.cart-summary__row {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+
+.cart-summary__row:nth-of-type(2) {
+  border-bottom: 2px solid var(--color-underline);
+  padding-bottom: 1rem;
+}
+
+.cart-summary__value {
+  font-weight: bold;
+}
+
+.cart-summary__value--free {
+  font-weight: bold;
+  color: var(--color-in-stock);
+}
+
+.cart-summary__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 2rem;
+}
+
+.cart-summary__taxes {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.cart-summary__total-value {
+  color: var(--color-accent);
+  font-size: 2rem;
+}
+
+.cart-summary__badges {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.cart-summary__badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.cart-summary__badge-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.cart-summary__badge-text {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+/* --- Checkout Button --- */
+.checkout-btn-section {
+  display: flex;
+  justify-content: center;
+}
+.checkout-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-block: 2rem;
+
+  width: 80%;
+  padding: 1rem 1.5rem;
+  background: var(--color-btn-contact-bg);
+  color: var(--color-white);
+  text-transform: uppercase;
+
+  cursor: pointer;
 }
