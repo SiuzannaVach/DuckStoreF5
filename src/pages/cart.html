@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DuckStore | Shopping Cart</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/png" href="../assets/icons/duck-icon.png" />
+  </head>
+  <body>
+    <header class="header">
+      <section class="header__logo-container">
+        <a href="../../index.html" class="header__logo-link">
+          <img
+            class="header__logo-img"
+            src="../assets/icons/duck-icon.png"
+            alt="DuckStore"
+          />
+          <div class="header__logo-text">DuckStore</div>
+        </a>
+      </section>
+
+      <nav class="header__nav">
+        <input type="checkbox" id="menu" class="header__menu-checkbox" hidden />
+
+        <label for="menu" class="header__hamburguer">
+          <span class="header__hamburger-icon"></span>
+        </label>
+
+        <ul class="header__menu">
+          <li class="header__item">
+            <a href="../../index.html" class="header__link">Home</a>
+          </li>
+          <li class="header__item">
+            <a
+              href="./catalog.html"
+              class="header__link active"
+              aria-current="page"
+              >Catalog</a
+            >
+          </li>
+          <li class="header__item">
+            <a href="./contact.html" class="header__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="cart">
+      <header class="cart__header">
+        <h1 class="cart__title">Shopping Cart</h1>
+        <p class="cart__subtitle">
+          Review your selection of premium collectibles
+        </p>
+      </header>
+
+      <!-- Contenedor donde JS pintará los productos -->
+      <section class="cart__items" id="cart-items"></section>
+
+      <!-- Resumen del pedido -->
+      <section class="cart-summary">
+        <h2 class="cart-summary__title">
+          Order <br />
+          Summary
+        </h2>
+
+        <div class="cart-summary__row">
+          <p class="cart-summary__label">Subtotal</p>
+          <p id="cart-subtotal" class="cart-summary__value">$0.00</p>
+        </div>
+
+        <div class="cart-summary__row">
+          <p class="cart-summary__label">Shipping</p>
+          <p class="cart-summary__value cart-summary__value--free">FREE</p>
+        </div>
+
+        <div class="cart-summary__section">
+          <div class="cart-summary__total">
+            <div class="cart-summary__total-info">
+              <p class="cart-summary__total-label">Total Amount</p>
+              <p class="cart-summary__taxes">Including Taxes</p>
+            </div>
+
+            <p id="cart-total" class="cart-summary__total-value">$0.00</p>
+          </div>
+
+          <div class="cart-summary__badges">
+            <div class="cart-summary__badge">
+              <img
+                class="cart-summary__badge-icon"
+                src="../assets/icons/secure-icon.svg"
+                alt="Icon of a shield"
+              />
+              <p class="cart-summary__badge-text">Secure</p>
+            </div>
+
+            <div class="cart-summary__badge">
+              <img
+                class="cart-summary__badge-icon"
+                src="../assets/icons/fast-ship-icon.svg"
+                alt="Icon of a truck"
+              />
+              <p class="cart-summary__badge-text">Fast ship</p>
+            </div>
+
+            <div class="cart-summary__badge">
+              <img
+                class="cart-summary__badge-icon"
+                src="../assets/icons/organic-icon.svg"
+                alt="Icon of a leaf"
+              />
+              <p class="cart-summary__badge-text">Organic</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="checkout-btn-section">
+        <button class="checkout-btn">
+          Proceed to checkout
+          <img
+            class="checkout-btn-icon"
+            src="../assets/icons/arrow-right.svg"
+            alt=""
+          />
+        </button>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img
+            src="../assets/icons/duck-icon.png"
+            alt="DuckStore logo icon"
+            class="footer__logo-img"
+          />
+          <p class="footer__logo-text">DuckStore</p>
+        </div>
+
+        <p class="footer__copyright">
+          &copy;2026 DuckStore. Playing by Design.
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="../js/cart/cart.js"></script>
+  </body>
+</html>
