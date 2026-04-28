@@ -1,11 +1,11 @@
-import { cart } from "./cartState.js";
+import { cart } from "../cart/cartState.js";
 import {
   incrementQuantity,
   decrementQuantity,
   removeFromCart,
   calculateTotal,
   calculateSubtotal,
-} from "./cartLogic.js";
+} from "../cart/cartLogic.js";
 
 function renderCartItem(item) {
   return `
