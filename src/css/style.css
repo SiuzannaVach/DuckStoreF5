@@ -5,6 +5,7 @@
 @import "./catalog.css";
 @import "./contact.css";
 @import "./detail-product.css";
+@import "./cart.css";
 
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
@@ -25,6 +26,7 @@
   --color-card2: rgb(64, 206, 243, 0.1);
   --color-card3: #ffffff;
   --color-card4: rgb(254, 208, 0, 0.1);
+  --color-card5: #F6F3F2;
   --color-line-border1: rgb(170, 173, 179, 0.1);
   --color-line-border2: rgb(111, 89, 0, 0.1);
   --color-in-stock: #22c55e;
@@ -36,6 +38,7 @@
     rgba(111, 89, 0, 1) 0%,
     rgba(254, 208, 0, 1) 100%
   );
+  --color-btn-quantity: #EAE7E7;
 }
 
 body {
