@@ -1,11 +1,30 @@
 export const createProductCard = (product) => {
   return `
-    <article class="product-card">
-      <img src="${product.image}" alt="${product.name}">
-      <div class="product-info">
-        <h3>${product.name}</h3>
-        <p class="price">$${product.price}</p>
-        <button class="btn-add" data-id="${product.id}">Añadir al carrito</button>
+    <article class="card">
+      <img
+        src="${product.image}"
+        alt="${product.name}"
+        class="card__image"
+      />
+
+      <div class="card__content">
+        <div class="card__header">
+          <h3 class="card__title">${product.name}</h3>
+          <p class="card__price">$${product.price}</p>
+        </div>
+
+        <p class="card__description">
+          ${product.description.substring(0, 100)}...
+        </p>
+
+        <a href="./product-detail.html?id=${product.id}" class="card__button">
+          <img
+            src="../assets/icons/duck-btn-icon.svg"
+            alt="Small rubber duck icon"
+            class="card__button-icon"
+          />
+          View Duck
+        </a>
       </div>
     </article>
   `;

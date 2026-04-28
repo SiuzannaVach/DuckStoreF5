@@ -155,3 +155,36 @@
     flex-direction: column;
   }
 }
+
+.catalog-header {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Estilo base (gris) */
+.filter-btn {
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Para que el cambio de color sea suave */
+}
+
+/* Esto forzará la separación y el color */
+.filters {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  margin-bottom: 50px !important; /* SEPARA DE LAS IMÁGENES */
+  padding: 20px !important;
+}
+
+.filter-btn.active {
+  background-color: #d4a017 !important; /* AMARILLO */
+  color: white !important;
+  border: none !important;
+}
