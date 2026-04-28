@@ -1,13 +1,14 @@
 import { cart } from "./cartState.js";
-import { products } from "../products.js";
+import { products } from "../components/products.js";
 
-export function addToCart(productId) {
+export function addToCart(productId, qty = 1) {
   // 1. Buscamos si el producto ya está en el carrito
   const productInCart = cart.find((item) => item.id === productId);
 
   // 2. Si ya existe, incrementamos la cantidad y salimos de la función
   if (productInCart) {
-    productInCart.quantity++;
+    productInCart.quantity += qty;
+    console.log("Carrito ahora:", cart);
     return;
   }
 
@@ -17,8 +18,9 @@ export function addToCart(productId) {
   // 4. Lo añadimos al carrito copiando todas las propiedades del producto original (...product) y añadimos quantity = 1
   cart.push({
     ...product,
-    quantity: 1,
+    quantity: qty,
   });
+  console.log("Carrito ahora:", cart);
 }
 
 export function incrementQuantity(productId) {
