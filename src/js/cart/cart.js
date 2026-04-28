@@ -1,98 +1,35 @@
-import { products } from "../products.js";
+import { cart } from "./cartState.js";
+import { incrementQuantity, decrementQuantity, removeFromCart, calculateTotal, calculateSubtotal } from "./cartLogic.js";
 
-// El carrito empieza vacío. Aquí guardaremos los productos que el usuario seleccione.
-export const cart = [];
+function renderCartItem(item) {
+  return `
+    <article class="cart-item">
+      <div class="cart-item__image-wrapper">
+        <img class="cart-item__image" src="${item.image}" alt="${item.name}">
+        <button class="cart-item__remove-btn" data-id="${item.id}">
+          <img src="../assets/icons/bin.svg" alt="">
+        </button>
+      </div>
 
-/**
- * Primera función = Añade un producto al carrito.
- * - Si el producto ya existe en el carrito, solo incrementa su cantidad.
- * - Si no existe, lo añade con quantity = 1.
- */
-export function addToCart(productId) {
-  // 1. Buscamos si el producto ya está en el carrito
-  const productInCart = cart.find((item) => item.id === productId);
+      <div class="cart-item__info">
+        <h2 class="cart-item__title">${item.name}</h2>
+        <p class="cart-item__price">$${item.price}</p>
 
-  // 2. Si ya existe, incrementamos la cantidad y salimos de la función
-  if (productInCart) {
-    productInCart.quantity++;
-    return;
-  }
+        <div class="cart-item__quantity">
+          <button class="cart-item__btn cart-item__btn--decrease" data-id="${item.id}">−</button>
+          <span class="cart-item__quantity-value">${item.quantity}</span>
+          <button class="cart-item__btn cart-item__btn--increase" data-id="${item.id}">+</button>
+        </div>
 
-  // 3. Si no existe en el carrito, buscamos el producto en el catálogo (products.js)
-  const product = products.find((p) => p.id === productId);
-
-  // 4. Lo añadimos al carrito copiando todas las propiedades del producto original (...product) y añadimos quantity = 1
-  cart.push({
-    ...product,
-    quantity: 1,
-  });
+        <div class="cart-item__subtotal">
+          <p class="cart-item__subtotal-value">$${calculateSubtotal(item.id)}</p>
+          <p class="cart-item__subtotal-label">Subtotal</p>
+        </div>
+      </div>
+    </article>
+  `;
 }
 
-export function incrementQuantity(productId) {
-  // 1. Buscamos si el producto ya está en el carrito
-  const productInCart = cart.find((item) => item.id === productId);
+function renderCart() {}
 
-  // 2. Si existe, incrementamos la cantidad en 1
-  if (productInCart) {
-    productInCart.quantity++;
-  }
-}
-
-export function decrementQuantity(productId) {
-  // 1. Buscamos si el producto ya está en el carrito
-  const productInCart = cart.find((item) => item.id === productId);
-
-  // 2. Si no existe, no hacemos nada
-  if (!productInCart) return;
-
-  // 3. Si existe, reducimos la cantidad
-  productInCart.quantity--;
-
-  // 4. Si llega a 0, lo eliminamos del carrito
-  if (productInCart.quantity === 0) {
-    const index = cart.findIndex((item) => item.id === productId);
-    cart.splice(index, 1);
-    return;
-  }
-
-  // 5. Nunca permitir negativos
-  if (productInCart.quantity < 0) {
-    throw new Error("Product quantity cannot be negative.");
-  }
-}
-
-export function removeFromCart(productId) {
-  // 1. Buscamos si el producto ya está en el carrito
-  const productInCart = cart.find((item) => item.id === productId);
-
-  // 2. Si no existe, no hacemos nada
-  if (!productInCart) return;
-
-  // 3. Si existe, creamos un nuevo array sin ese producto
-  const updatedCart = cart.filter((item) => item.id !== productId);
-
-  // 4. Vaciar el carrito original y rellenarlo con el nuevo
-  cart.length = 0;
-  cart.push(...updatedCart);
-}
-
-export function calculateSubtotal(productId) {
-  // 1. Recibir un producto del carrito
-  const productInCart = cart.find((item) => item.id === productId);
-
-  // 2. Calcular precio * cantidad
-  const subtotal = productInCart.price * productInCart.quantity;
-
-  // 3. Devolver el subtotal
-  return subtotal;
-}
-
-export function calculateTotal(cart) {
-  // 1. Recorremos todo el carrito con reduce.
-  // 'acc' es el acumulador que empieza en 0 (ver en la última línea).
-  // 'item' es cada producto del carrito en cada iteración.
-  return cart.reduce((acc, item) => {
-    // 2. Sumamos al acumulador el subtotal de este producto, reutilizando la función calculateSubtotal para mantener el código modular (haciendo un callback).
-    return acc + calculateSubtotal(item.id);
-  }, 0);
-}
+document.addEventListener("DOMContentLoaded", renderCart);

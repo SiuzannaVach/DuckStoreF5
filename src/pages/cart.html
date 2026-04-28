@@ -46,78 +46,58 @@
       </nav>
     </header>
 
-    <main>
-      <div>
-        <h1>Shopping Cart</h1>
-        <p>Review your selection of premium collectibles</p>
-      </div>
+    <main class="cart">
+      <header class="cart__header">
+        <h1 class="cart__title">Shopping Cart</h1>
+        <p class="cart__subtitle">
+          Review your selection of premium collectibles
+        </p>
+      </header>
 
-      <section>
-        <article class="card">
-          <div class="card__picture">
+      <!-- Contenedor donde JS pintará los productos -->
+      <section class="cart__items" id="cart-items"></section>
+
+      <!-- Resumen del pedido -->
+      <section class="cart-summary">
+        <h2 class="cart-summary__title">Order Summary</h2>
+
+        <div class="cart-summary__row">
+          <p>Subtotal</p>
+          <p id="cart-subtotal">$0.00</p>
+        </div>
+
+        <div class="cart-summary__row">
+          <p>Shipping</p>
+          <p>FREE</p>
+        </div>
+
+        <div class="cart-summary__total">
+          <div>
+            <p>Total Amount</p>
+            <p class="cart-summary__taxes">Including Taxes</p>
+          </div>
+          <p id="cart-total">$0.00</p>
+          <div>
+            <img src="../assets/icons/secure-icon.svg" alt="Icon of a shield" />
+            <p>Secure</p>
+          </div>
+          <div>
             <img
-              src="../assets/images/classic-yellow.png"
-              alt="Image of a classic yellow duck"
+              src="../assets/icons/fast-ship-icon.svg"
+              alt="Icon of a truck"
             />
-            <img src="../assets/icons/bin.svg" alt="Icon of a recycle bin" />
+            <p>Fast ship</p>
           </div>
-
-          <div class="card__info">
-            <div class="card__title&price">
-              <h2>Classic Yellow Duck</h2>
-              <p>$9.99 each</p>
-            </div>
-            <div>
-              <div><span>-</span>2<span>+</span></div>
-            </div>
-            <div>
-                <p>$19,98</p>
-                <p>Subtotal</p>
-            </div>
+          <div>
+            <img src="../assets/icons/organic-icon.svg" alt="Icon of a leave" />
+            <p>Organic</p>
           </div>
-        </article>
-      </section>
+        </div>
 
-      <section class="oder-summary">
-        <h2>Order Summary</h2>
-        <article>
-            <div>
-                <p>Subtotal</p>
-                <p>$34.97</p>
-            </div>
-            <div>
-                <p>Shipping</p>
-                <p>FREE</p>
-            </div>
-            <div>
-                <div>
-                    <p>Total Amount</p>
-                    <p>Including Taxes</p>
-                </div>
-                <p>$34.97</p>
-            </div>
-            <div>
-        </article>
-
-        <article>
-            <div>
-                <img src="../assets/icons/secure-icon.svg" alt="Icon of a shield">
-                <p>Secure</p>
-            </div>
-            <div>
-                <img src="../assets/icons/fast-ship-icon.svg" alt="Icon of a truck">
-                <p>Fast ship</p>
-            </div>
-            <div>
-                <img src="../assets/icons/organic-icon.svg" alt="Icon od a leave">
-                <p>Organic</p>
-            </div>
-        </article>
-
-        <article>
-            <button>Proceed to checkout <img src="" alt="Arrow icon"> </button>
-        </article>
-
+        <button class="cart-summary__checkout">
+          Proceed to checkout
+          <img src="../assets/icons/arrow-right.svg" alt="" />
+        </button>
       </section>
     </main>
 
