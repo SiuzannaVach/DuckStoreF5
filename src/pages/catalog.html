@@ -22,11 +22,9 @@
 
       <nav class="header__nav">
         <input type="checkbox" id="menu" class="header__menu-checkbox" hidden />
-
         <label for="menu" class="header__hamburguer">
           <span class="header__hamburger-icon"></span>
         </label>
-
         <ul class="header__menu">
           <li class="header__item">
             <a href="../../index.html" class="header__link">Home</a>
@@ -50,208 +48,37 @@
       <section class="catalog-intro">
         <h1 class="catalog-intro__title">
           The Designer
-          <span class="catalog-intro__title-accent">Duck</span>
-          Collection
+          <span class="catalog-intro__title-accent">Duck</span> Collection
         </h1>
         <p class="catalog-intro__description">
           Premium rubber ducks reimagined as tactile art pieces for the modern
-          enthusiast. Every piece is weighted and finished for peak playfulness.
+          enthusiast.
         </p>
       </section>
 
+      <!-- 1. FILTROS (Arriba) -->
+      <div class="filters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="Classic">Classic</button>
+        <button class="filter-btn" data-category="Limited edition">
+          Limited edition
+        </button>
+        <button class="filter-btn" data-category="Exclusive">Exclusive</button>
+      </div>
+
+      <!-- 2. CONTENEDOR ÚNICO (Vacío para JS) -->
       <section class="catalog">
-        <div class="catalog__grid">
-          <article class="card">
-            <img
-              src="../assets/images/classic-yellow.png"
-              alt="Classic Yellow Duck"
-              class="card__image"
-            />
-
-            <div class="card__content">
-              <div class="card__header">
-                <h3 class="card__title">Classic Yellow</h3>
-                <p class="card__price">$9.99</p>
-              </div>
-
-              <p class="card__description">
-                Matte finish with a weighted base for perfect buoyancy. A
-                timeless addition to any collection.
-              </p>
-
-              <a href="../pages/detail-classic-duck.html" class="card__button">
-                <img
-                  src="../assets/icons/duck-btn-icon.svg"
-                  alt="Small rubber duck icon"
-                  class="card__button-icon"
-                />
-                View Duck
-              </a>
-            </div>
-          </article>
-
-          <article class="card">
-            <img
-              src="../assets/images/captain-quack.png"
-              alt="Captain Quack image"
-              class="card__image"
-            />
-
-            <div class="card__content">
-              <div class="card__header">
-                <h3 class="card__title">Captain Quack</h3>
-                <p class="card__price">$14.99</p>
-              </div>
-
-              <p class="card__description">
-                Hand-painted nautical details with a tiny felt captain's hat.
-                Only 500 units crafted.
-              </p>
-
-              <a href="../pages/detail-captain-quack.html" class="card__button">
-                <img
-                  src="../assets/icons/duck-btn-icon.svg"
-                  alt="Small rubber duck icon"
-                  class="card__button-icon"
-                />
-                View Duck
-              </a>
-            </div>
-          </article>
-
-          <article class="card">
-            <img
-              src="../assets/images/astro-duck.png"
-              alt="Astro Duck image"
-              class="card__image"
-            />
-
-            <div class="card__content">
-              <div class="card__header">
-                <h3 class="card__title">Astro Duck</h3>
-                <p class="card__price">$16.99</p>
-              </div>
-
-              <p class="card__description">
-                Features a chrome-finished space helmet and zero-gravity weight
-                balance. Truly out of this world.
-              </p>
-
-              <a href="./detail-astro-duck.html" class="card__button">
-                <img
-                  src="../assets/icons/duck-btn-icon.svg"
-                  alt="Small rubber duck icon"
-                  class="card__button-icon"
-                />
-                View Duck
-              </a>
-            </div>
-          </article>
-
-          <article class="card">
-            <img
-              src="../assets/images/chef-quack.png"
-              alt="Chef Quack image"
-              class="card__image"
-            />
-
-            <div class="card__content">
-              <div class="card__header">
-                <h3 class="card__title">Chef Quack</h3>
-                <p class="card__price">$11.99</p>
-              </div>
-
-              <p class="card__description">
-                Equipped with a miniature chef's toque and a whisk. Perfect for
-                the culinary artist.
-              </p>
-
-              <a href="./detail-chef-quack.html" class="card__button">
-                <img
-                  src="../assets/icons/duck-btn-icon.svg"
-                  alt="Small rubber duck icon"
-                  class="card__button-icon"
-                />
-                View Duck
-              </a>
-            </div>
-          </article>
-
-          <article class="card">
-            <img
-              src="../assets/images/superhero-duck.png"
-              alt="Superhero Duck image"
-              class="card__image"
-            />
-
-            <div class="card__content">
-              <div class="card__header">
-                <h3 class="card__title">Superhero Duck</h3>
-                <p class="card__price">$12.99</p>
-              </div>
-
-              <p class="card__description">
-                Built for action with a custom fabric cape and dynamic pose.
-                Ready to save bath time.
-              </p>
-
-              <a href="./detail-superhero-duck.html" class="card__button">
-                <img
-                  src="../assets/icons/duck-btn-icon.svg"
-                  alt="Small rubber duck icon"
-                  class="card__button-icon"
-                />
-                View Duck
-              </a>
-            </div>
-          </article>
-
-          <article class="card">
-            <img
-              src="../assets/images/zen-master.png"
-              alt="Zen Master Duck image"
-              class="card__image"
-            />
-
-            <div class="card__content">
-              <div class="card__header">
-                <h3 class="card__title">Zen Master Duck</h3>
-                <p class="card__price">$13.99</p>
-              </div>
-
-              <p class="card__description">
-                Soft-touch lavender scented silicone with a serene expression.
-                Brings peace to every tub.
-              </p>
-
-              <a href="./detail-zen-master.html" class="card__button">
-                <img
-                  src="../assets/icons/duck-btn-icon.svg"
-                  alt="Small rubber duck icon"
-                  class="card__button-icon"
-                />
-                View Duck
-              </a>
-            </div>
-          </article>
+        <div id="products-container" class="catalog__grid">
+          <!-- El JS llenará esto automáticamente -->
         </div>
       </section>
     </main>
-    <footer id="footer">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img
-            src="../assets/icons/duck-icon.png"
-            alt="DuckStore logo icon"
-            class="footer__logo-img"
-          />
-          <p class="footer__logo-text">DuckStore</p>
-        </div>
 
-        <p class="footer__copyright">
-          &copy;2026 DuckStore. Playing by Design.
-        </p>
-      </div>
+    <footer id="footer">
+      <!-- Tu footer aquí -->
     </footer>
+
+    <!-- 3. SCRIPT AL FINAL -->
+    <script type="module" src="../js/catalog.js"></script>
   </body>
 </html>
