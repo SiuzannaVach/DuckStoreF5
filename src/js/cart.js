@@ -4,10 +4,10 @@ const btnPay = document.querySelector("#btn-confirm-pay");
 const btnClose = document.querySelector("#btn-close-modal");
 const receiptDetails = document.querySelector("#receipt-details");
 const totalDisplay = document.querySelector("#checkout-total");
-const subtotalDisplay = document.querySelector("#subtotal-val"); // Añadido para el diseño nuevo
-const btnTotalVal = document.querySelector("#btn-total-val"); // El texto dentro del botón de pago
+const subtotalDisplay = document.querySelector("#subtotal-val");
+const btnTotalVal = document.querySelector("#btn-total-val");
 
-// 2. SIMULACIÓN: Productos con imagen (como en la captura)
+// 2. SIMULACIÓN: Productos con imagen
 const miCarrito = [
   {
     name: "Classic Yellow Duck",
@@ -21,7 +21,7 @@ const miCarrito = [
   },
 ];
 
-// 3. Función para abrir el modal con el diseño de la imagen
+// 3. Función para abrir el modal
 export const abrirRecibo = () => {
   if (!receiptDetails) return;
 
@@ -41,18 +41,20 @@ export const abrirRecibo = () => {
     `;
   });
 
-  const tax = 2.8; // Impuesto fijo según tu imagen
+  const tax = 2.8;
   const total = subtotal + tax;
 
-  // Actualizamos todos los valores en el modal
   if (subtotalDisplay) subtotalDisplay.innerText = `$${subtotal.toFixed(2)}`;
   if (totalDisplay) totalDisplay.innerText = `$${total.toFixed(2)}`;
   if (btnTotalVal) btnTotalVal.innerText = `$${total.toFixed(2)}`;
 
   modal.style.display = "flex";
+
+  // BLOQUEO del fondo (Efecto profesional)
+  document.body.style.overflow = "hidden";
 };
 
-// 4. BOTÓN: Confirmar Pago (Mensaje de éxito mejorado)
+// 4. BOTÓN: Confirmar Pago
 if (btnPay) {
   btnPay.addEventListener("click", () => {
     modal.innerHTML = `
@@ -70,10 +72,12 @@ if (btnPay) {
 if (btnClose) {
   btnClose.addEventListener("click", () => {
     modal.style.display = "none";
+    // DESBLOQUEO del fondo
+    document.body.style.overflow = "auto";
   });
 }
 
-// 6. Evento para el botón de "Ver Recibo" del HTML
+// 6. Evento para el botón de "Ver Recibo"
 const botonVerRecibo = document.querySelector("#btn-ver-recibo");
 if (botonVerRecibo) {
   botonVerRecibo.addEventListener("click", () => {
