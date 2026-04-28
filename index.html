@@ -186,5 +186,65 @@
     </footer>
 
     <script type="module" src="./src/js/main.js"></script>
+
+    <!-- Pon esto encima del Modal de Pago -->
+    <div style="text-align: center; margin: 20px">
+      <button id="btn-ver-recibo" class="card__button">
+        🛒 Ver Recibo y Pagar
+      </button>
+    </div>
+
+    <!-- Debajo de aquí ya iría tu <div id="checkout-modal"> ... -->
+
+    <!-- Modal de Pago -->
+    <div id="checkout-modal" class="modal" style="display: none">
+      <div class="modal-content receipt-card">
+        <h1 class="receipt-title">Review Order</h1>
+
+        <!-- Lista de productos -->
+        <div id="receipt-details" class="receipt-products">
+          <!-- JS meterá aquí los patitos -->
+        </div>
+
+        <!-- Sección de Envío (Diseño de la imagen) -->
+        <div class="receipt-section">
+          <div class="section-header">
+            <span>🚚 Shipping Address</span>
+            <button class="btn-edit">Edit</button>
+          </div>
+          <p class="address-details">
+            <strong>Alex Rivers</strong><br />
+            1242 Feather Lane, Loft 4B<br />
+            Portland, OR 97204
+          </p>
+        </div>
+
+        <!-- Resumen de Pago -->
+        <div class="payment-summary">
+          <h3>Payment Summary</h3>
+          <div class="summary-line">
+            <span>Subtotal</span> <span id="subtotal-val">$0.00</span>
+          </div>
+          <div class="summary-line">
+            <span>Shipping</span> <span class="free-text">FREE</span>
+          </div>
+          <div class="summary-line">
+            <span>Estimated Tax</span> <span id="tax-val">$2.80</span>
+          </div>
+          <hr />
+          <div class="summary-total">
+            <span>Total</span>
+            <span id="checkout-total">$0.00</span>
+          </div>
+        </div>
+
+        <!-- Botón de Pago Amarilo -->
+        <button id="btn-confirm-pay" class="pay-now-btn">
+          🔒 Pay <span id="btn-total-val">$0.00</span> Now
+        </button>
+
+        <button id="btn-close-modal" class="btn-cancel">Cancel</button>
+      </div>
+    </div>
   </body>
 </html>
