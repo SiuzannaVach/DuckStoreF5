@@ -1,22 +1,10 @@
-// El carrito empieza vacío. Aquí guardaremos los productos que el usuario seleccione.
-// export const cart = [];
+// 1. Cargar carrito desde localStorage
+export const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-export const cart = [
-  {
-    id: 1,
-    image: "../assets/images/classic-yellow.png",
-    name: "Classic Yellow Duck",
-    price: 9.99,
-    quantity: 2, // 👈 cantidad inicial para ver el subtotal
-  },
-  {
-    id: 2,
-    image: "../assets/images/classic-yellow.png",
-    name: "Classic Yellow Duck",
-    price: 9.99,
-    quantity: 2, // 👈 cantidad inicial para ver el subtotal
-  }
-]
+// 2. Guardar carrito en localStorage
+export function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
 
 
 

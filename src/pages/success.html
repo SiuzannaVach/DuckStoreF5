@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DuckStore | Catalog</title>
+    <title>DuckStore | Success</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="icon" type="image/png" href="../assets/icons/duck-icon.png" />
   </head>
@@ -22,62 +22,72 @@
 
       <nav class="header__nav">
         <input type="checkbox" id="menu" class="header__menu-checkbox" hidden />
+
         <label for="menu" class="header__hamburguer">
           <span class="header__hamburger-icon"></span>
         </label>
+
         <ul class="header__menu">
           <li class="header__item">
             <a href="../../index.html" class="header__link">Home</a>
           </li>
           <li class="header__item">
-            <a
-              href="./catalog.html"
-              class="header__link active"
-              aria-current="page"
-              >Catalog</a
-            >
+            <a href="./catalog.html" class="header__link">Catalog</a>
           </li>
           <li class="header__item">
             <a href="./contact.html" class="header__link">Contact</a>
           </li>
           <li class="header__item">
-            <a href="./cart.html" class="header__link"
-              ><img
-                src="../assets/icons/cart.svg"
-                alt="Shopping cart"
+            <a href="./cart.html" class="header__link" aria-current="page"
+              ><img src="../assets/icons/cart.svg" alt="Shopping cart"
             /></a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section class="catalog-intro">
-        <h1 class="catalog-intro__title">
-          The Designer
-          <span class="catalog-intro__title-accent">Duck</span> Collection
-        </h1>
-        <p class="catalog-intro__description">
-          Premium rubber ducks reimagined as tactile art pieces for the modern
-          enthusiast.
-        </p>
+    <main class="success">
+      <section class="success__header">
+        <div class="success__icon-wrapper">
+          <div class="success__icon-circle success__icon-circle--outer">
+            <div class="success__icon-circle success__icon-circle--inner">
+              <div class="success__icon">
+                <img src="../assets/icons/success.svg" alt="Success icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h1 class="success__title">Purchase Successful</h1>
+        <p class="success__subtitle">Your new friends are on their way.</p>
       </section>
 
-      <!-- 1. FILTROS (Arriba) -->
-      <div class="filters">
-        <button class="filter-btn active" data-category="all">All</button>
-        <button class="filter-btn" data-category="Classic">Classic</button>
-        <button class="filter-btn" data-category="Limited edition">
-          Limited edition
-        </button>
-        <button class="filter-btn" data-category="Exclusive">Exclusive</button>
-      </div>
+      <section class="success__order">
+        <h3 class="success__order-label">Order number</h3>
+        <h2 class="success__order-number">#DS-88294-QUACK</h2>
 
-      <!-- 2. CONTENEDOR ÚNICO (Vacío para JS) -->
-      <section class="catalog">
-        <div id="products-container" class="catalog__grid">
-          <!-- El JS llenará esto automáticamente -->
+        <div class="success__order-info">
+          <div class="success__order-info-item">
+            <p>Estimated delivery</p>
+            <p class="success__delivery-days">3–5 Business Days</p>
+          </div>
+
+          <div class="success__order-info-item">
+            <p>Shipping status</p>
+            <p class="success__status">
+              <span class="success__status-dot"></span>
+              Preparing Shipment
+            </p>
+          </div>
         </div>
+      </section>
+
+      <section class="success__actions">
+        <a href="../../index.html" class="success__button">Back to home</a>
+        <p class="success__support">
+          Need help?
+          <a href="./contact.html">Contact Support</a>
+        </p>
       </section>
     </main>
 
@@ -97,8 +107,6 @@
         </p>
       </div>
     </footer>
-
-    <!-- 3. SCRIPT AL FINAL -->
-    <script type="module" src="../js/pages/catalog.js"></script>
+    <script type="module" src="../js/cart/success.js"></script>
   </body>
 </html>

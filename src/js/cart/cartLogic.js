@@ -1,13 +1,14 @@
-import { cart } from "./cartState.js";
-import { products } from "../products.js";
+import { cart, saveCart } from "./cartState.js";
+import { products } from "../components/products.js";
 
-export function addToCart(productId) {
+export function addToCart(productId, qty = 1) {
   // 1. Buscamos si el producto ya está en el carrito
   const productInCart = cart.find((item) => item.id === productId);
 
   // 2. Si ya existe, incrementamos la cantidad y salimos de la función
   if (productInCart) {
-    productInCart.quantity++;
+    productInCart.quantity += qty;
+    saveCart();
     return;
   }
 
@@ -17,8 +18,10 @@ export function addToCart(productId) {
   // 4. Lo añadimos al carrito copiando todas las propiedades del producto original (...product) y añadimos quantity = 1
   cart.push({
     ...product,
-    quantity: 1,
+    quantity: qty,
   });
+
+  saveCart();
 }
 
 export function incrementQuantity(productId) {
@@ -28,6 +31,7 @@ export function incrementQuantity(productId) {
   // 2. Si existe, incrementamos la cantidad en 1
   if (productInCart) {
     productInCart.quantity++;
+    saveCart();
   }
 }
 
@@ -52,6 +56,8 @@ export function decrementQuantity(productId) {
   if (productInCart.quantity < 0) {
     throw new Error("Product quantity cannot be negative.");
   }
+
+  saveCart();
 }
 
 export function removeFromCart(productId) {
@@ -67,6 +73,7 @@ export function removeFromCart(productId) {
   // 4. Vaciar el carrito original y rellenarlo con el nuevo
   cart.length = 0;
   cart.push(...updatedCart);
+  saveCart();
 }
 
 export function calculateSubtotal(productId) {

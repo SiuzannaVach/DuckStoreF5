@@ -51,34 +51,8 @@
       </nav>
     </header>
 
-    <main>
-      <section class="catalog-intro">
-        <h1 class="catalog-intro__title">
-          The Designer
-          <span class="catalog-intro__title-accent">Duck</span> Collection
-        </h1>
-        <p class="catalog-intro__description">
-          Premium rubber ducks reimagined as tactile art pieces for the modern
-          enthusiast.
-        </p>
-      </section>
-
-      <!-- 1. FILTROS (Arriba) -->
-      <div class="filters">
-        <button class="filter-btn active" data-category="all">All</button>
-        <button class="filter-btn" data-category="Classic">Classic</button>
-        <button class="filter-btn" data-category="Limited edition">
-          Limited edition
-        </button>
-        <button class="filter-btn" data-category="Exclusive">Exclusive</button>
-      </div>
-
-      <!-- 2. CONTENEDOR ÚNICO (Vacío para JS) -->
-      <section class="catalog">
-        <div id="products-container" class="catalog__grid">
-          <!-- El JS llenará esto automáticamente -->
-        </div>
-      </section>
+    <main id="product-detail-container">
+      <!-- JS pintará aquí -->
     </main>
 
     <footer id="footer">
@@ -98,7 +72,6 @@
       </div>
     </footer>
 
-    <!-- 3. SCRIPT AL FINAL -->
-    <script type="module" src="../js/pages/catalog.js"></script>
+    <script type="module" src="../js/pages/productDetail.js"></script>
   </body>
 </html>

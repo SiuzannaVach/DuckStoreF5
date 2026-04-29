@@ -1,4 +1,3 @@
-import { products } from "./products.js";
+import { products } from "./components/products.js";
 
 console.log("Catálogo cargado:", products);
-

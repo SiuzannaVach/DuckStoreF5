@@ -41,12 +41,12 @@
 }
 
 .location-card__title {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-block: 20px;
 }
 
 .location-card__text {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .location-card__map {
@@ -63,7 +63,7 @@
 }
 
 .connect-card__title {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 
@@ -74,6 +74,157 @@
   gap: 10px;
 
   padding-block: 10px;
+}
+
+/*contact form */
+
+.contact-form__container {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 50px 40px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-line-border1);
+  border-radius: 60px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.contact-form__label {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: var(--color-text);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.contact-form__input,
+.contact-form__textarea {
+  width: 100%;
+  background-color: var(--color-form-input);
+  border: 1px solid transparent;
+  padding: 18px 25px;
+  border-radius: 50px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 1rem;
+  color: #333;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.contact-form__textarea {
+  border-radius: 30px;
+  min-height: 150px;
+  resize: none;
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: var(--color-line-border1);
+}
+
+
+.contact-form__button {
+  width: 100%;
+  background: var(--color-btn-contact-bg);
+  color: var(--color-btn-contact-text);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding: 20px;
+  border: none;
+  border-radius: 50px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-form__button:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.error-msg {
+  color: var(--color-price);
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 6px;
+  margin-left: 15px;
+  min-height: 14px;
+}
+
+.error-msg:not(:empty) {
+  animation: errorFadeIn 0.4s ease-out forwards;
+}
+
+@keyframes errorFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.location-card__map {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+}
+
+.location-card__info {
+  padding-block: 20px;
+  flex: 1;
+  min-width: 0;
+}
+
+.connect-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.connect-card__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-block: 10px;
+  width: 100%;
+}
+
+.connect-card__icon {
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.connect-card__text {
+  flex-grow: 1;
+  min-width: 0;
 }
 
 @media (min-width: 768px) {
@@ -102,45 +253,12 @@
     margin: 0 auto;
   }
 
-  .location-card {
-    flex-direction: row;
-    overflow: hidden;
+  .contact-form__container {
+    max-width: 1000px;
   }
 
-  .location-card__map {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    object-fit: cover;
-  }
-
-  .location-card__info {
-    padding-block: 20px;
-    flex: 1;
-    min-width: 0;
-  }
-
-  .connect-card {
+  .contact-form__basic-info {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .connect-card__item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-block: 10px;
-    width: 100%;
-  }
-
-  .connect-card__icon {
-    flex-shrink: 0;
-    width: 24px;
-  }
-
-  .connect-card__text {
-    flex-grow: 1;
-    min-width: 0;
+    gap: 30px;
   }
 }

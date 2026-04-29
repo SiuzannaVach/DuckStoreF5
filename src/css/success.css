@@ -1,0 +1,171 @@
+.success {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: var(--color-white);
+  border-radius: 32px;
+}
+
+/* HEADER */
+.success__header {
+  margin-bottom: 2.5rem;
+}
+
+.success__icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Outer + inner circles */
+.success__icon-circle {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success__icon-circle--outer {
+  width: 120px;
+  height: 120px;
+  background: var(--color-circle--outer);
+}
+
+.success__icon-circle--inner {
+  width: 90px;
+  height: 90px;
+  background: var(--color-circle--inner);
+}
+
+.success__icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.success__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.success__subtitle {
+  font-size: 1rem;
+}
+
+/* ORDER BOX */
+.success__order {
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.success__order-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+  font-weight: 400;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.success__order-number {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: var(--color-accent);
+  border-bottom: 1px solid var(--color-underline);
+  padding-bottom: 10px;
+}
+
+.success__order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.success__order-info-item {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.success__order-info-item p:first-child {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.success__delivery-days {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Status dot */
+.success__status {
+  background-color: var(--color-preparing-pill);
+  border-radius: 50px;
+  padding: 0 4px;
+  color: var(--color-preparing-status);
+  font-size: 0.7rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.success__status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: var(--color-preparing-status);
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+/* ACTIONS */
+.success__actions {
+  text-align: center;
+}
+
+.success__button {
+  background: var(--color-btn-contact-bg);
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1rem 4rem;
+  border: none;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 260px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.success__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.success__support {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--color-accent);
+}
+
+.success__support a {
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (min-width: 600px) {
+  .success {
+    width: 600px;
+    max-width: 1000px;
+  }
+}
