@@ -74,39 +74,56 @@
       </section>
 
       <!-- PAYMENT SUMMARY -->
-      <section class="cart-summary cart-summary--review">
-        <h3 class="cart-summary__title">Payment Summary</h3>
+      <section class="payment-summary payment-summary--review">
+        <h3 class="payment-summary__title">Payment Summary</h3>
 
-        <div class="cart-summary__row">
-          <span class="cart-summary__label">Subtotal</span>
-          <span id="subtotal-val" class="cart-summary__value">$0.00</span>
+        <div class="payment-summary__row">
+          <p class="payment-summary__label">Subtotal</p>
+          <p id="subtotal-val" class="payment-summary__value">$0.00</p>
         </div>
 
-        <div class="cart-summary__row">
-          <span class="cart-summary__label">Shipping</span>
-          <span class="cart-summary__value cart-summary__value--free"
-            >FREE</span
-          >
+        <div class="payment-summary__row">
+          <p class="payment-summary__label">Shipping</p>
+          <p class="payment-summary__value payment-summary__value--free">
+            FREE
+          </p>
         </div>
 
-        <hr class="cart-summary__divider" />
-
-        <div class="cart-summary__row cart-summary__row--total">
-          <span class="cart-summary__total-label">Total</span>
-          <span id="checkout-total" class="cart-summary__total-value"
-            >$0.00</span
-          >
+        <div class="payment-summary__row payment-summary__row--total">
+          <p class="payment-summary__total-label">Total</p>
+          <p id="checkout-total" class="payment-summary__total-value">$0.00</p>
         </div>
 
-        <button id="btn-confirm-pay" class="cart-summary__pay-btn">
-          🔒 Pay <span id="btn-total-val">$0.00</span> Now
+        <button
+          id="btn-confirm-pay"
+          class="payment-summary__pay-btn"
+          type="button"
+        >
+          <img src="../assets/icons/lock.svg" alt="" /> Pay Now
         </button>
 
-        <p class="cart-summary__disclaimer">
+        <p class="payment-summary__disclaimer">
           By clicking Pay Now, you agree to DuckStore's Terms of Service.
         </p>
       </section>
     </main>
+
+    <footer id="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img
+            src="../assets/icons/duck-icon.png"
+            alt="DuckStore logo icon"
+            class="footer__logo-img"
+          />
+          <p class="footer__logo-text">DuckStore</p>
+        </div>
+
+        <p class="footer__copyright">
+          &copy;2026 DuckStore. Playing by Design.
+        </p>
+      </div>
+    </footer>
 
     <script type="module" src="../js/pages/reviewOrder.js"></script>
   </body>

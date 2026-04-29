@@ -110,6 +110,86 @@
 .info-card__name {
   font-weight: bold;
 }
+
+/* --- Payment Summary --- */
+.payment-summary {
+  margin: 1.5rem;
+  padding: 1.5rem;
+  background: var(--color-card-order-summary);
+  border-radius: 32px;
+}
+
+.payment-summary__title {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.payment-summary__row {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+
+.payment-summary__row:nth-of-type(2) {
+  border-bottom: 2px solid var(--color-underline);
+  padding-bottom: 4px;
+  line-height: 1.2;
+}
+
+.payment-summary__label {
+  font-weight: 400;
+}
+
+.payment-summary__value {
+  font-weight: bold;
+}
+
+.payment-summary__value--free {
+  font-weight: bold;
+  color: var(--color-in-stock);
+}
+
+.payment-summary__row--total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 2rem;
+}
+
+.payment-summary__total-label {
+  color: var(--color-title);
+}
+
+.payment-summary__total-value {
+  color: var(--color-accent);
+  font-size: 2rem;
+}
+
+.payment-summary__pay-btn {
+  background: var(--color-btn-contact-bg);
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1rem 4rem;
+  border: none;
+  border-radius: 50px;
+  max-width: 260px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+  display: inline-flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.payment-summary__disclaimer {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
 @media (min-width: 768px) {
   .review-order-item {
     display: flex;
@@ -182,5 +262,18 @@
     font-size: 0.65rem;
     font-weight: bold;
     font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  .info-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+
+  .payment-summary {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 1.5rem;
   }
 }
