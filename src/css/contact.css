@@ -167,7 +167,8 @@
 
 .error-msg {
   color: var(--color-price);
-  font-size: 0.7rem;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 0.85rem;
   font-weight: 700;
   margin-top: 6px;
   margin-left: 15px;
