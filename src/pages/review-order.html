@@ -3,89 +3,112 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Review Order | DuckStore</title>
+    <title>DuckStore | Review Order</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="icon" type="image/png" href="../assets/icons/duck-icon.png" />
-</head>
-
-  <body class="review-body">
+  </head>
+  <body>
     <header class="header">
-  <section class="header__logo-container">
+      <section class="header__logo-container">
         <a href="../../index.html" class="header__logo-link">
-  <img class="header__logo-img"
+          <img
+            class="header__logo-img"
             src="../assets/icons/duck-icon.png"
-            alt="DuckStore"/>
-          <div class="header__logo-text">DuckStore<div>
+            alt="DuckStore"
+          />
+          <div class="header__logo-text">DuckStore</div>
         </a>
       </section>
 
       <nav class="header__nav">
-      <ul class="header__menu">
-        <li class="header__item"><a href="../../index.html" class="header__link">Home</a></li>
-        <li class="header__item"><a href="./catalog.html" class="header__link">Catalog</a></li>
-        <li class="header__item"><a href="./contact.html" class="header__link">Contact</a></li>
-      </ul>
-    </nav>
+        <input type="checkbox" id="menu" class="header__menu-checkbox" hidden />
 
-      
-      <!-- В HTML замени свою строку на эту: -->
-<div class="header__cart">
-  <img src="../assets/icons/basket.svg" alt="Cart" class="header__cart-icon">
-</div>
- </header>
+        <label for="menu" class="header__hamburguer">
+          <span class="header__hamburger-icon"></span>
+        </label>
 
-<main class="review-page">
-        <h1 class="review-page__title">Review Order</h1>
+        <ul class="header__menu">
+          <li class="header__item">
+            <a href="../../index.html" class="header__link">Home</a>
+          </li>
+          <li class="header__item">
+            <a href="./catalog.html" class="header__link">Catalog</a>
+          </li>
+          <li class="header__item">
+            <a href="./contact.html" class="header__link">Contact</a>
+          </li>
+          <li class="header__item">
+            <a href="./cart.html" class="header__link" aria-current="page"
+              ><img src="../assets/icons/cart.svg" alt="Shopping cart"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
- <section id="receipt-details" class="review-page_section"></section>
+    <main class="review-order">
+      <h1 class="review-order__title">Review Order</h1>
 
+      <!-- PRODUCT LIST -->
+      <section id="receipt-details" class="review-order__items"></section>
 
- <!-- Adressa -->
-<section class="card info-card">
-  <div class="info-card__header">
-    <div class="info-card__label">
-      <!-- Usando tu icono car.svg -->
-      <img src="../assets/icons/car.svg" alt="Shipping" class="info-card__icon">
-      <span>Shipping Address</span>
-    </div>
-    <a href="#" class="info-card__edit">Edit</a>
-  </div>
-  
-  <div class="info-card__content">
-    <p class="info-card__name">Alex Rivers</p>
-    <p>1242 Feather Lane, Loft 4B</p>
-    <p>Portland, OR 97204</p>
-    <p>United States</p>
-  </div>
-</section>
+      <!-- SHIPPING ADDRESS -->
+      <section class="info-card">
+        <div class="info-card__header">
+          <div class="info-card__label">
+            <img
+              src="../assets/icons/car.svg"
+              alt="Shipping"
+              class="info-card__icon"
+            />
+            <span>Shipping Address</span>
+          </div>
+          <a href="#" class="info-card__edit">Edit</a>
+        </div>
 
-  <!-- Pago -->
-        <section class="payment-summary">
-            <h3 class="payment-summary__title">Payment Summary</h3>
-            <div class="payment-summary__row">
-                <span>Subtotal</span>
-                <span id="subtotal-val">$0.00</span>
-            </div>
-            <div class="payment-summary__row">
-                <span>Shipping</span>
-                <span class="payment-summary__value--free">FREE</span>
-            </div>
-            <div class="payment-summary__row">
-                <span>Estimated Tax</span>
-                <span>$2.80</span>
-            </div>
-            <hr class="payment-summary__divider">
-            <div class="payment-summary__row payment-summary__row--total">
-                <span>Total</span>
-                <span id="checkout-total" class="payment-summary__total-amount">$0.00</span>
-            </div>
-            <button id="btn-confirm-pay" class="button-pay">
-                🔒 Pay <span id="btn-total-val">$0.00</span> Now
-            </button>
-            <p class="payment-summary__disclaimer">By clicking Pay Now, you agree to DuckStore's Terms of Service.</p>
-        </section>
+        <div class="info-card__content">
+          <p class="info-card__name">Alex Rivers</p>
+          <p>1242 Feather Lane, Loft 4B</p>
+          <p>Portland, OR 97204</p>
+          <p>United States</p>
+        </div>
+      </section>
+
+      <!-- PAYMENT SUMMARY -->
+      <section class="cart-summary cart-summary--review">
+        <h3 class="cart-summary__title">Payment Summary</h3>
+
+        <div class="cart-summary__row">
+          <span class="cart-summary__label">Subtotal</span>
+          <span id="subtotal-val" class="cart-summary__value">$0.00</span>
+        </div>
+
+        <div class="cart-summary__row">
+          <span class="cart-summary__label">Shipping</span>
+          <span class="cart-summary__value cart-summary__value--free"
+            >FREE</span
+          >
+        </div>
+
+        <hr class="cart-summary__divider" />
+
+        <div class="cart-summary__row cart-summary__row--total">
+          <span class="cart-summary__total-label">Total</span>
+          <span id="checkout-total" class="cart-summary__total-value"
+            >$0.00</span
+          >
+        </div>
+
+        <button id="btn-confirm-pay" class="cart-summary__pay-btn">
+          🔒 Pay <span id="btn-total-val">$0.00</span> Now
+        </button>
+
+        <p class="cart-summary__disclaimer">
+          By clicking Pay Now, you agree to DuckStore's Terms of Service.
+        </p>
+      </section>
     </main>
 
- <script type="module" src="../js/reviewOrder.js"></script>
-</body>
+    <script type="module" src="../js/pages/reviewOrder.js"></script>
+  </body>
 </html>

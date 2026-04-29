@@ -116,4 +116,18 @@ function setupCartEvents() {
 document.addEventListener("DOMContentLoaded", () => {
   renderCart();
   setupCartEvents();
+
+  const checkoutBtn = document.querySelector(".checkout-btn");
+
+  if (checkoutBtn) {
+    if (cart.length === 0) {
+      checkoutBtn.disabled = true;
+      checkoutBtn.classList.add("checkout-btn--disabled");
+      checkoutBtn.setAttribute("aria-disabled", "true");
+    } else {
+      checkoutBtn.addEventListener("click", () => {
+        window.location.href = "./review-order.html";
+      });
+    }
+  }
 });
