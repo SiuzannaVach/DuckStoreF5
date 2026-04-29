@@ -1,83 +1,84 @@
 /* ============================
-   REVIEW ORDER — PRODUCT ITEM
+   REVIEW ORDER — MOBILE FIRST
    ============================ */
 
 .review-order-item {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   padding: 1rem;
   background: var(--color-card5);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   border-radius: 32px;
 }
 
-/* LISTA DE ITEMS */
+.review-order__title {
+  text-align: center;
+}
+
+/* LISTA */
 .review-order__items {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   padding: 1.5rem;
-  border-radius: 32px;
 }
 
-/* IMAGEN */
+/* IMAGEN (más pequeña en mobile) */
 .review-order__image-wrapper {
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .review-order__image {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 /* TEXTO */
 .review-order__text {
-  flex: 1;
-}
-
-.review-order__title {
-  text-align: center;
+  width: 100%;
 }
 
 .review-order__item-title {
-  font-size: 1.25rem;
-}
-
-.review-order__price {
-  font-size: 0.875rem;
-  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.2;
+  overflow: hidden;
 }
 
 /* BOTTOM ROW */
 .review-order__bottom-row {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  width: 100%;
 }
 
-/* CANTIDAD (READONLY) */
+/* CANTIDAD (mantengo tu font-family) */
 .review-order__quantity {
   font-family: "Be Vietnam Pro", sans-serif;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  white-space: nowrap;
 }
 
-.review-order__quantity-value {
-}
-
-/* SUBTOTAL */
+/* SUBTOTAL (mantengo tus estilos) */
 .review-order__subtotal {
   text-align: right;
-  min-width: 100px;
+  min-width: 0; /* ← antes 80px */
+  flex-shrink: 1;
 }
 
 .review-order__subtotal-value {
   color: var(--color-accent);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
@@ -86,4 +87,81 @@
   font-size: 0.65rem;
   font-weight: bold;
   font-family: "Plus Jakarta Sans", sans-serif;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .review-order-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    background: var(--color-card5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+  
+  }
+
+  .review-order__items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 32px;
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  .review-order__image-wrapper {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+  }
+
+  .review-order__image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .review-order__text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .review-order__item-title {
+    font-size: 1.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .review-order__bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    flex: 1;
+  }
+
+  .review-order__subtotal {
+    text-align: right;
+    min-width: 100px;
+  }
+
+  .review-order__subtotal-value {
+    color: var(--color-accent);
+    font-size: 1.4rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  .review-order__subtotal-label {
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    font-weight: bold;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
 }

@@ -15,7 +15,7 @@ function renderReceipt() {
   cart.forEach((item) => {
     const subtotal = calculateSubtotal(item.id);
 
-    receiptDetails.innerHTML += receiptDetails.innerHTML += `
+    receiptDetails.innerHTML += `
   <article class="review-order-item">
     <div class="review-order__image-wrapper">
       <img class="review-order__image" src="${item.image}" alt="${item.name}">
