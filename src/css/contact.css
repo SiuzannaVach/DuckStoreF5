@@ -136,6 +136,7 @@
   border-color: var(--color-line-border1);
 }
 
+
 .contact-form__button {
   width: 100%;
   background: var(--color-btn-contact-bg);
@@ -253,5 +254,10 @@
 
   .contact-form__container {
     max-width: 1000px;
+  }
+
+  .contact-form__basic-info {
+    display: flex;
+    gap: 30px;
   }
 }
