@@ -73,6 +73,57 @@
         />
       </section>
 
+      <section class="contact-form" aria-labelledby="form-title">
+        <form id="duckForm" class="contact-form__container" novalidate>
+          <div class="contact-form__basic-info">
+            <div class="contact-form__field">
+              <label for="userName" class="contact-form__label">Name</label>
+              <input
+                id="userName"
+                type="text"
+                class="contact-form__input"
+                placeholder="Waddle Duckington"
+                aria-required="true"
+                aria-describedby="nameError"
+              />
+              <span class="error-msg" id="nameError" aria-live="polite"></span>
+            </div>
+
+            <div class="contact-form__field">
+              <label for="userEmail" class="contact-form__label">Email</label>
+              <input
+                id="userEmail"
+                type="email"
+                class="contact-form__input"
+                placeholder="waddle@pond.com"
+                aria-required="true"
+                aria-describedby="emailError"
+              />
+              <span class="error-msg" id="emailError" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="contact-form__field">
+            <label for="userMessage" class="contact-form__label">Message</label>
+            <textarea
+              id="userMessage"
+              class="contact-form__textarea"
+              placeholder="Tell us about your duck dreams..."
+              aria-required="true"
+              aria-describedby="messageError"
+            ></textarea>
+            <span class="error-msg" id="messageError" aria-live="polite"></span>
+          </div>
+
+          <button
+            type="submit"
+            class="contact-form__button"
+            aria-label="Send Message"
+          >
+            SEND MESSAGE <span class="btn-icon">▷</span>
+          </button>
+        </form>
+      </section>
+
       <section class="contact-info">
         <article class="location-card">
           <div class="location-card__info">
@@ -136,5 +187,6 @@
         </p>
       </div>
     </footer>
+    <script type="module" src="../js/contact.js"></script>
   </body>
 </html>
