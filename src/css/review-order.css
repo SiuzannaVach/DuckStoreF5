@@ -1,41 +1,4 @@
-body {
-  font-family:
-    "Inter",
-    -apple-system,
-    sans-serif;
-  background-color: var(--color-bg);
-  margin: 0;
-  color: var(--color-text-main);
-  -webkit-font-smoothing: antialiased;
-}
 
-/* --- 3. HEADER (Distribución Espacial) --- */
-.header {
-  display: flex;
-  justify-content: space-between; /* Empuja logo a izq y carrito a der */
-  align-items: center;
-  padding: 20px 5%;
-  background: #fff;
-}
-
-.header__nav {
-  display: flex;
-  gap: 30px;
-}
-
-.header__menu {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  padding: 0;
-  margin: 0;
-}
-
-.header__link {
-  text-decoration: none;
-  color: var(--color-text-main);
-  font-weight: 500;
-}
 
 /* --- 4. CONTENEDOR PRINCIPAL --- */
 .review-page {
