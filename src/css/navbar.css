@@ -134,6 +134,7 @@
 
   .header__menu {
     display: flex !important;
+    align-items: center;
     position: static;
     flex-direction: row;
     width: auto;
