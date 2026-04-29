@@ -76,52 +76,25 @@
   padding-block: 10px;
 }
 
-@media (min-width: 768px) {
-  .contact-hero {
-    max-width: 1200px;
-    flex-direction: row;
-
-    margin: 0 auto;
-  }
-
-  .contact-hero__description {
-    max-width: 750px;
-  }
-
-  .contact-hero__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .contact-info {
-    display: grid;
-    grid-template-columns: 2fr minmax(250px, 1fr);
-
-    max-width: 1200px;
-    margin: 0 auto;
-  }
- 
-
-  /*contact form */
+/*contact form */
 
 .contact-form__container {
   max-width: 420px;
   margin: 40px auto;
   padding: 50px 40px;
-  background-color: var(--color-bg);
+  background-color: var(--color-white);
   border: 1px solid var(--color-line-border1);
-  border-radius: 60px; 
+  border-radius: 60px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   display: flex;
-  flex-direction: column; 
-  gap: 20px; 
+  flex-direction: column;
+  gap: 20px;
 }
 
 .contact-form__field {
   display: flex;
-  flex-direction: column; 
-  align-items: flex-start; 
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
 }
 
@@ -132,28 +105,28 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  margin-bottom: 10px; 
-  margin-left: 15px;    
+  margin-bottom: 10px;
+  margin-left: 15px;
 }
 
 .contact-form__input,
 .contact-form__textarea {
-  width: 100%; 
+  width: 100%;
   background-color: var(--color-form-input);
   border: 1px solid transparent;
   padding: 18px 25px;
-  border-radius: 50px; 
+  border-radius: 50px;
   font-family: "Be Vietnam Pro", sans-serif;
   font-size: 1rem;
   color: #333;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   transition: all 0.3s ease;
 }
 
 .contact-form__textarea {
-  border-radius: 30px; 
-  min-height: 150px;   
-  resize: none;        
+  border-radius: 30px;
+  min-height: 150px;
+  resize: none;
 }
 
 .contact-form__input:focus,
@@ -179,7 +152,10 @@
   align-items: center;
   gap: 10px;
   cursor: pointer;
-  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .contact-form__button:hover {
@@ -202,59 +178,80 @@
 }
 
 @keyframes errorFadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 480px) {
-  .contact-form__container {
-    margin: 20px;
-    padding: 30px 20px;
-    width: auto;
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
   }
-  
-  .contact-form__label {
-    font-size: 0.7rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+.location-card__map {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+}
 
+.location-card__info {
+  padding-block: 20px;
+  flex: 1;
+  min-width: 0;
+}
 
-  .location-card__map {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    object-fit: cover;
+.connect-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.connect-card__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-block: 10px;
+  width: 100%;
+}
+
+.connect-card__icon {
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.connect-card__text {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .contact-hero {
+    max-width: 1200px;
+    flex-direction: row;
+
+    margin: 0 auto;
   }
 
-  .location-card__info {
-    padding-block: 20px;
-    flex: 1;
-    min-width: 0;
+  .contact-hero__description {
+    max-width: 750px;
   }
 
-  .connect-card {
+  .contact-hero__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  .connect-card__item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-block: 10px;
-    width: 100%;
+  .contact-info {
+    display: grid;
+    grid-template-columns: 2fr minmax(250px, 1fr);
+
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  .connect-card__icon {
-    flex-shrink: 0;
-    width: 24px;
-  }
-
-  .connect-card__text {
-    flex-grow: 1;
-    min-width: 0;
+  .contact-form__container {
+    max-width: 1000px;
   }
 }
-

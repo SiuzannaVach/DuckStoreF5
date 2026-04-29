@@ -36,6 +36,7 @@
     rgba(111, 89, 0, 1) 0%,
     rgba(254, 208, 0, 1) 100%
   );
+  --color-white: #ffff;
 }
 
 body {
