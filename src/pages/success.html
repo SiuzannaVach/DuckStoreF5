@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DuckStore | Success</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/png" href="../assets/icons/duck-icon.png" />
+  </head>
+  <body>
+    <header class="header">
+      <section class="header__logo-container">
+        <a href="../../index.html" class="header__logo-link">
+          <img
+            class="header__logo-img"
+            src="../assets/icons/duck-icon.png"
+            alt="DuckStore"
+          />
+          <div class="header__logo-text">DuckStore</div>
+        </a>
+      </section>
+
+      <nav class="header__nav">
+        <input type="checkbox" id="menu" class="header__menu-checkbox" hidden />
+
+        <label for="menu" class="header__hamburguer">
+          <span class="header__hamburger-icon"></span>
+        </label>
+
+        <ul class="header__menu">
+          <li class="header__item">
+            <a href="../../index.html" class="header__link">Home</a>
+          </li>
+          <li class="header__item">
+            <a href="./catalog.html" class="header__link">Catalog</a>
+          </li>
+          <li class="header__item">
+            <a href="./contact.html" class="header__link">Contact</a>
+          </li>
+          <li class="header__item">
+            <a href="./cart.html" class="header__link" aria-current="page"
+              ><img src="../assets/icons/cart.svg" alt="Shopping cart"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="success">
+      <section class="success__header">
+        <div class="success__icon-wrapper">
+          <div class="success__icon-circle success__icon-circle--outer">
+            <div class="success__icon-circle success__icon-circle--inner">
+              <div class="success__icon">
+                <img src="../assets/icons/success.svg" alt="Success icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h1 class="success__title">Purchase Successful</h1>
+        <p class="success__subtitle">Your new friends are on their way.</p>
+      </section>
+
+      <section class="success__order">
+        <h3 class="success__order-label">Order number</h3>
+        <h2 class="success__order-number">#DS-88294-QUACK</h2>
+
+        <div class="success__order-info">
+          <div class="success__order-info-item">
+            <p>Estimated delivery</p>
+            <p>3–5 Business Days</p>
+          </div>
+
+          <div class="success__order-info-item">
+            <p>Shipping status</p>
+            <p>
+              <span class="success__status-dot"></span>
+              Preparing Shipment
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="success__actions">
+        <button class="success__button">Back to home</button>
+        <p class="success__support">
+          Need help?
+          <a href="./contact.html">Contact Support</a>
+        </p>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img
+            src="../assets/icons/duck-icon.png"
+            alt="DuckStore logo icon"
+            class="footer__logo-img"
+          />
+          <p class="footer__logo-text">DuckStore</p>
+        </div>
+
+        <p class="footer__copyright">
+          &copy;2026 DuckStore. Playing by Design.
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="../js/cart/success.js"></script>
+  </body>
+</html>
