@@ -3,82 +3,117 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DuckStore | Catalog</title>
+    <title>Review Order | DuckStore</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="icon" type="image/png" href="../assets/icons/duck-icon.png" />
-  </head>
-  <body>
+</head>
+
+  <body class="review-body">
     <header class="header">
-      <section class="header__logo-container">
+  <section class="header__logo-container">
         <a href="../../index.html" class="header__logo-link">
-          <img
-            class="header__logo-img"
+  <img class="header__logo-img"
             src="../assets/icons/duck-icon.png"
-            alt="DuckStore"
-          />
-          <div class="header__logo-text">DuckStore</div>
+            alt="DuckStore"/>
+          <div class="header__logo-text">DuckStore<div>
         </a>
       </section>
 
       <nav class="header__nav">
-        <input type="checkbox" id="menu" class="header__menu-checkbox" hidden />
-        <label for="menu" class="header__hamburguer">
-          <span class="header__hamburger-icon"></span>
-        </label>
-        <ul class="header__menu">
-          <li class="header__item">
-            <a href="../../index.html" class="header__link">Home</a>
-          </li>
-          <li class="header__item">
-            <a
-              href="./catalog.html"
-              class="header__link active"
-              aria-current="page"
-              >Catalog</a
-            >
-          </li>
-          <li class="header__item">
-            <a href="./contact.html" class="header__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+      <ul class="header__menu">
+        <li class="header__item"><a href="../../index.html" class="header__link">Home</a></li>
+        <li class="header__item"><a href="./catalog.html" class="header__link">Catalog</a></li>
+        <li class="header__item"><a href="./contact.html" class="header__link">Contact</a></li>
+      </ul>
+    </nav>
 
-    <main>
-      <section class="catalog-intro">
-        <h1 class="catalog-intro__title">
-          The Designer
-          <span class="catalog-intro__title-accent">Duck</span> Collection
-        </h1>
-        <p class="catalog-intro__description">
-          Premium rubber ducks reimagined as tactile art pieces for the modern
-          enthusiast.
-        </p>
-      </section>
+      
+      <!-- В HTML замени свою строку на эту: -->
+<div class="header__cart">
+  <img src="../assets/icons/basket.svg" alt="Cart" class="header__cart-icon">
+</div>
+ </header>
 
-      <!-- 1. FILTROS (Arriba) -->
-      <div class="filters">
-        <button class="filter-btn active" data-category="all">All</button>
-        <button class="filter-btn" data-category="Classic">Classic</button>
-        <button class="filter-btn" data-category="Limited edition">
-          Limited edition
-        </button>
-        <button class="filter-btn" data-category="Exclusive">Exclusive</button>
-      </div>
+<main class="review-page">
+        <h1 class="review-page__title">Review Order</h1>
 
-      <!-- 2. CONTENEDOR ÚNICO (Vacío para JS) -->
-      <section class="catalog">
-        <div id="products-container" class="catalog__grid">
-          <!-- El JS llenará esto automáticamente -->
-        </div>
-      </section>
+ <section id="receipt-details" class="review-page_section">
+
+<!-- Producto 1 -->
+  <article class="product-card">
+    <!-- Grupo IZQUIERDA -->
+    <div class="product-card__left">
+      <img src="../assets/images/classic-yellow.png" alt="Classic Yellow Duck" class="product-card__img" />
+      <h2 class="product-card__name">Classic Yellow Duck</h2>
+    </div>
+    
+    <!-- Grupo DERECHA -->
+    <div class="product-card__right">
+      <span class="product-card__qty">Qty: 2</span>
+      <span class="product-card__price">$19.98</span>
+    </div>
+  </article>
+  
+
+  <!-- Producto 2 -->
+  <article class="product-card">
+    <div class="product-card__left">
+      <img src="../assets/images/captain-quack.png" alt="Captain Quack" class="product-card__img" />
+      <h2 class="product-card__name">Captain Quack</h2>
+    </div>
+    <div class="product-card__right">
+      <span class="product-card__qty">Qty: 1</span>
+      <span class="product-card__price">$14.99</span>
+    </div>
+  </article>
+</section>
+
+ <!-- Adressa -->
+<section class="card info-card">
+  <div class="info-card__header">
+    <div class="info-card__label">
+      <!-- Usando tu icono car.svg -->
+      <img src="../assets/icons/car.svg" alt="Shipping" class="info-card__icon">
+      <span>Shipping Address</span>
+    </div>
+    <a href="#" class="info-card__edit">Edit</a>
+  </div>
+  
+  <div class="info-card__content">
+    <p class="info-card__name">Alex Rivers</p>
+    <p>1242 Feather Lane, Loft 4B</p>
+    <p>Portland, OR 97204</p>
+    <p>United States</p>
+  </div>
+</section>
+
+  <!-- Pago -->
+        <section class="payment-summary">
+            <h3 class="payment-summary__title">Payment Summary</h3>
+            <div class="payment-summary__row">
+                <span>Subtotal</span>
+                <span id="subtotal-val">$0.00</span>
+            </div>
+            <div class="payment-summary__row">
+                <span>Shipping</span>
+                <span class="payment-summary__value--free">FREE</span>
+            </div>
+            <div class="payment-summary__row">
+                <span>Estimated Tax</span>
+                <span>$2.80</span>
+            </div>
+            <hr class="payment-summary__divider">
+            <div class="payment-summary__row payment-summary__row--total">
+                <span>Total</span>
+                <span id="checkout-total" class="payment-summary__total-amount">$0.00</span>
+            </div>
+            <button id="btn-confirm-pay" class="button-pay">
+                🔒 Pay <span id="btn-total-val">$0.00</span> Now
+            </button>
+            <p class="payment-summary__disclaimer">By clicking Pay Now, you agree to DuckStore's Terms of Service.</p>
+        </section>
     </main>
 
-    <footer id="footer">
-      <!-- Tu footer aquí -->
-    </footer>
-
-    <!-- 3. SCRIPT AL FINAL -->
-    <script type="module" src="../js/catalog.js"></script>
-  </body>
+ <script type="module" src="../js/reviewOrder.js"></script>
+</body>
 </html>

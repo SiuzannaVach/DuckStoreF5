@@ -1,4 +1,6 @@
-// 1. Seleccionamos los elementos del HTML
+import { products } from "./products.js";
+import { createProductCard } from "./components/productCard.js";
+
 const modal = document.querySelector("#checkout-modal");
 const btnPay = document.querySelector("#btn-confirm-pay");
 const btnClose = document.querySelector("#btn-close-modal");
@@ -7,35 +9,39 @@ const totalDisplay = document.querySelector("#checkout-total");
 const subtotalDisplay = document.querySelector("#subtotal-val");
 const btnTotalVal = document.querySelector("#btn-total-val");
 
-// 2. SIMULACIÓN: Productos con imagen
+// SIMULACIÓN (Asegúrate de que las Qty: 2 y Qty: 1 se vean como en tu imagen)
 const miCarrito = [
   {
     name: "Classic Yellow Duck",
-    price: 9.99,
+    price: 19.98,
+    qty: 2,
     image: "../assets/images/classic-yellow.png",
   },
   {
     name: "Captain Quack",
     price: 14.99,
+    qty: 1,
     image: "../assets/images/captain-quack.png",
   },
 ];
 
-// 3. Función para abrir el modal
 export const abrirRecibo = () => {
   if (!receiptDetails) return;
   receiptDetails.innerHTML = "";
   let subtotal = 0;
 
-  miCarrito.forEach((producto) => {
-    subtotal += producto.price;
+  miCarrito.forEach((p) => {
+    subtotal += p.price;
     receiptDetails.innerHTML += `
-      <div class="receipt-item" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
+      <div class="receipt-item" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px; border-bottom:1px solid #eee; padding-bottom:10px;">
         <div style="display:flex; align-items:center; gap:15px;">
-          <img src="${producto.image}" style="width:50px; height:50px; border-radius:10px; object-fit:cover;">
-          <strong>${producto.name}</strong>
+          <img src="${p.image}" style="width:50px; border-radius:10px; object-fit:cover;">
+          <div>
+            <strong>${p.name}</strong><br>
+            <small style="color: #666;">Qty: ${p.qty}</small>
+          </div>
         </div>
-        <span>$${producto.price.toFixed(2)}</span>
+        <span>$${p.price.toFixed(2)}</span>
       </div>
     `;
   });
@@ -51,48 +57,26 @@ export const abrirRecibo = () => {
   document.body.style.overflow = "hidden";
 };
 
-// 4. BOTÓN: Confirmar Pago (BLOQUE ACTUALIZADO)
+// Eventos de botones
 if (btnPay) {
   btnPay.addEventListener("click", () => {
-    // Simulamos carga
     btnPay.innerText = "Procesando...";
-    btnPay.style.opacity = "0.7";
-    btnPay.style.pointerEvents = "none";
-
     setTimeout(() => {
-      // Mensaje de éxito detallado en el DOM
-      modal.innerHTML = `
-        <div class="modal-content" style="text-align:center; padding:40px;">
-          <div style="font-size: 60px; margin-bottom: 20px;">🦆✨</div>
-          <h2 style="color: #d4a017; margin-bottom: 10px;">¡Pago Exitoso!</h2>
-          <p style="color: #666; margin-bottom: 20px;">Tus patitos están preparando las maletas para su nueva bañera.</p>
-          <button id="btn-success-close" class="pay-now-btn">Volver a la tienda</button>
-        </div>
-      `;
-
-      // Evento para limpiar y cerrar todo
-      document
-        .querySelector("#btn-success-close")
-        .addEventListener("click", () => {
-          document.body.style.overflow = "auto";
-          location.reload(); // Limpia el carrito al recargar
-        });
+      modal.innerHTML = `<div class="modal-content" style="text-align:center; padding:40px;">
+        <div style="font-size: 60px;">🦆✨</div>
+        <h2>¡Pago Exitoso!</h2>
+        <p>Tus patitos están en camino.</p>
+        <button onclick="location.reload()" class="pay-now-btn">Cerrar</button>
+      </div>`;
     }, 1500);
   });
 }
 
-// 5. BOTÓN: Cancelar
-if (btnClose) {
-  btnClose.addEventListener("click", () => {
+if (btnClose)
+  btnClose.onclick = () => {
     modal.style.display = "none";
     document.body.style.overflow = "auto";
-  });
-}
+  };
 
-// 6. Evento para el botón de "Ver Recibo"
-const botonVerRecibo = document.querySelector("#btn-ver-recibo");
-if (botonVerRecibo) {
-  botonVerRecibo.addEventListener("click", () => {
-    abrirRecibo();
-  });
-}
+const btnVer = document.querySelector("#btn-ver-recibo");
+if (btnVer) btnVer.onclick = abrirRecibo;
