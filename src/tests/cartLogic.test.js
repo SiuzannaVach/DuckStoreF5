@@ -1,18 +1,17 @@
 import { describe, test, expect, vi, beforeEach } from "vitest";
-
-vi.mock("../js/features/cart/cartState.js", () => ({
-  cart: [],
-  saveCart: vi.fn(),
-}));
-
-vi.mock("../js/features/products/products.js", () => ({
-  products: [{ id: 1, name: "Patito 1", price: 10, quantity: 1 }],
-}));
-
 import { cart, saveCart } from "../js/features/cart/cartState";
 import { addToCart, calculateSubtotal } from "../js/features/cart/cartLogic.js";
 
 describe("cartLogic", () => {
+  vi.mock("../js/features/cart/cartState.js", () => ({
+    cart: [],
+    saveCart: vi.fn(),
+  }));
+
+  vi.mock("../js/features/products/products.js", () => ({
+    products: [{ id: 1, name: "Patito 1", price: 10, quantity: 1 }],
+  }));
+
   beforeEach(() => {
     cart.length = 0;
   });
