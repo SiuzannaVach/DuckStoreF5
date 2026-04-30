@@ -1,5 +1,5 @@
 import { cart, saveCart } from "./cartState.js";
-import { products } from "../components/products.js";
+import { products } from "../products/products.js";
 
 export function addToCart(productId, qty = 1) {
   // 1. Buscamos si el producto ya está en el carrito

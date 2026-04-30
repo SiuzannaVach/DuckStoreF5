@@ -1,5 +1,5 @@
-import { cart } from "../cart/cartState.js";
-import { calculateTotal, calculateSubtotal } from "../cart/cartLogic.js";
+import { cart } from "../features/cart/cartState.js";
+import { calculateTotal, calculateSubtotal } from "../features/cart/cartLogic.js";
 
 const receiptDetails = document.querySelector("#receipt-details");
 const subtotalDisplay = document.querySelector("#subtotal-val");

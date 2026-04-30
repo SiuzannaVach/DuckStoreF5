@@ -1,5 +1,5 @@
-import { products } from "../components/products.js";
-import { createProductCard } from "../components/productCard.js";
+import { products } from "../features/products/products.js";
+import { createProductCard } from "../features/products/productCard.js";
 
 const productsContainer = document.querySelector("#products-container");
 const filterButtons = document.querySelectorAll(".filter-btn");

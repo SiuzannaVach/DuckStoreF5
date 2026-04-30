@@ -1,6 +1,6 @@
-import { products } from "../components/products.js";
-import { createProductDetail } from "../components/createProductDetail.js";
-import { addToCart } from "../cart/cartLogic.js";
+import { products } from "../features/products/products.js";
+import { createProductDetail } from "../features/products/createProductDetail.js";
+import { addToCart } from "../features/cart/cartLogic.js";
 
 const id = Number(new URLSearchParams(window.location.search).get("id"));
 const product = products.find((p) => p.id === id);
